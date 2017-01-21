@@ -44,6 +44,8 @@ class topController: UIViewController {
         secondVC.tabBarItem = UITabBarItem(title: "自分の情報", image: nil, tag: 2)
         viewControllers.append(secondVC)
         
+        
+        
         // ページをセット
         let tabBarController = UITabBarController()
         tabBarController.setViewControllers(viewControllers, animated: false)

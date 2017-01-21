@@ -135,6 +135,8 @@ class MyInfoViewController: UIViewController {
     }
     
     func changeView(){
+        var hinan = hinanSiteiController()
+        self.present(hinan, animated: true, completion: nil)
         
     }
     

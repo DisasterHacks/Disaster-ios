@@ -54,7 +54,6 @@ extension TwitterAPI{
         
         func response(from object: Any, urlResponse: HTTPURLResponse) throws -> TwitterData {
             //return try response(from: object, urlResponse: urlResponse)
-            print("object=>\(object)")
             return try! TwitterData.decodeValue(object)
         }
     }

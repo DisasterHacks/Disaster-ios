@@ -35,6 +35,12 @@
 		75C588DF1E334AA4008C7DA0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C588DE1E334AA4008C7DA0 /* User.swift */; };
 		75C588E21E334CF9008C7DA0 /* Shelter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C588E11E334CF9008C7DA0 /* Shelter.swift */; };
 		75C588E51E334FF9008C7DA0 /* MeshEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C588E41E334FF9008C7DA0 /* MeshEngine.swift */; };
+		75C588E81E33753D008C7DA0 /* RealmModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C588E71E33753D008C7DA0 /* RealmModelable.swift */; };
+		75C588EB1E3375B7008C7DA0 /* NewsRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C588EA1E3375B7008C7DA0 /* NewsRealmModel.swift */; };
+		75C588ED1E3375CE008C7DA0 /* NeedsRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C588EC1E3375CE008C7DA0 /* NeedsRealmModel.swift */; };
+		75C588EF1E3375DD008C7DA0 /* UserRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C588EE1E3375DD008C7DA0 /* UserRealmModel.swift */; };
+		75C588F11E337660008C7DA0 /* SyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C588F01E337660008C7DA0 /* SyncEngine.swift */; };
+		75C588F41E337820008C7DA0 /* RealmExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C588F31E337820008C7DA0 /* RealmExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +95,12 @@
 		75C588DE1E334AA4008C7DA0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Syncable/User.swift; sourceTree = "<group>"; };
 		75C588E11E334CF9008C7DA0 /* Shelter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shelter.swift; path = Models/Shelter.swift; sourceTree = "<group>"; };
 		75C588E41E334FF9008C7DA0 /* MeshEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeshEngine.swift; path = MeshEngine/MeshEngine.swift; sourceTree = "<group>"; };
+		75C588E71E33753D008C7DA0 /* RealmModelable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmModelable.swift; path = Models/RealmModels/RealmModelable.swift; sourceTree = "<group>"; };
+		75C588EA1E3375B7008C7DA0 /* NewsRealmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsRealmModel.swift; path = Models/RealmModels/NewsRealmModel.swift; sourceTree = "<group>"; };
+		75C588EC1E3375CE008C7DA0 /* NeedsRealmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NeedsRealmModel.swift; path = Models/RealmModels/NeedsRealmModel.swift; sourceTree = "<group>"; };
+		75C588EE1E3375DD008C7DA0 /* UserRealmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserRealmModel.swift; path = Models/RealmModels/UserRealmModel.swift; sourceTree = "<group>"; };
+		75C588F01E337660008C7DA0 /* SyncEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SyncEngine.swift; path = SyncEngine/SyncEngine.swift; sourceTree = "<group>"; };
+		75C588F31E337820008C7DA0 /* RealmExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmExtension.swift; path = Utils/RealmExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +253,8 @@
 		5F7BFD6A1E30E3CC006F988A /* disaster_ios */ = {
 			isa = PBXGroup;
 			children = (
+				75C588F21E33780D008C7DA0 /* Utils */,
+				75C588E61E337506008C7DA0 /* SyncEngine */,
 				5F189BC21E3357F7000142C9 /* API */,
 				75C588E31E334FB2008C7DA0 /* MeshEngine */,
 				75C588E01E334BD5008C7DA0 /* Models */,
@@ -301,6 +315,7 @@
 		75C588E01E334BD5008C7DA0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				75C588E91E337587008C7DA0 /* RealmModels */,
 				75C588E11E334CF9008C7DA0 /* Shelter.swift */,
 			);
 			name = Models;
@@ -312,6 +327,33 @@
 				75C588E41E334FF9008C7DA0 /* MeshEngine.swift */,
 			);
 			name = MeshEngine;
+			sourceTree = "<group>";
+		};
+		75C588E61E337506008C7DA0 /* SyncEngine */ = {
+			isa = PBXGroup;
+			children = (
+				75C588F01E337660008C7DA0 /* SyncEngine.swift */,
+			);
+			name = SyncEngine;
+			sourceTree = "<group>";
+		};
+		75C588E91E337587008C7DA0 /* RealmModels */ = {
+			isa = PBXGroup;
+			children = (
+				75C588E71E33753D008C7DA0 /* RealmModelable.swift */,
+				75C588EA1E3375B7008C7DA0 /* NewsRealmModel.swift */,
+				75C588EC1E3375CE008C7DA0 /* NeedsRealmModel.swift */,
+				75C588EE1E3375DD008C7DA0 /* UserRealmModel.swift */,
+			);
+			name = RealmModels;
+			sourceTree = "<group>";
+		};
+		75C588F21E33780D008C7DA0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				75C588F31E337820008C7DA0 /* RealmExtension.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -474,6 +516,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75C588EF1E3375DD008C7DA0 /* UserRealmModel.swift in Sources */,
 				5F189BB61E31222D000142C9 /* Weather.swift in Sources */,
 				75C588DD1E334A8F008C7DA0 /* Needs.swift in Sources */,
 				5F189BBF1E3351EE000142C9 /* TwitterAPI.swift in Sources */,
@@ -481,9 +524,14 @@
 				5F189BBA1E31903B000142C9 /* sample.swift in Sources */,
 				75C588D91E334A70008C7DA0 /* Syncable.swift in Sources */,
 				75C588DB1E334A84008C7DA0 /* News.swift in Sources */,
+				75C588F11E337660008C7DA0 /* SyncEngine.swift in Sources */,
+				75C588E81E33753D008C7DA0 /* RealmModelable.swift in Sources */,
 				5F189BC71E336075000142C9 /* TwitterHimotoki.swift in Sources */,
 				5F189BB31E312217000142C9 /* APIKitSampleController.swift in Sources */,
+				75C588EB1E3375B7008C7DA0 /* NewsRealmModel.swift in Sources */,
+				75C588ED1E3375CE008C7DA0 /* NeedsRealmModel.swift in Sources */,
 				5F7BFD6E1E30E3CC006F988A /* ViewController.swift in Sources */,
+				75C588F41E337820008C7DA0 /* RealmExtension.swift in Sources */,
 				75C588E21E334CF9008C7DA0 /* Shelter.swift in Sources */,
 				5F189BB81E312F14000142C9 /* HimotokiSampleController.swift in Sources */,
 				5F189BBC1E32159A000142C9 /* realmSample.swift in Sources */,

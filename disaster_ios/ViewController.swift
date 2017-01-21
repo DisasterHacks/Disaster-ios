@@ -12,53 +12,60 @@ import Himotoki
 
 class ViewController: UIViewController {
     
+    let meshManager = MeshEngine.shared
     
-    //DB
-    let userdb = userDB()
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("きたー！")
-        //himotoki()
-        //realm()
-        twitter()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.meshManager.delegate = self
+        self.meshManager.id = UUID.init().uuidString
+        self.meshManager.joinMeshNetwork()
     }
     
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    @IBAction func send(_ sender: Any) {
+        let news = News(id: UUID.init().uuidString, text: "hello world")
+        self.meshManager.send(syncable: news)
     }
-
-
 }
 
-extension ViewController{
-    func himotoki(){
-        let request = PersonAPI.PersonEnum.all()
-        Session.send(request) { result in
-            switch result {
-            case .success(let person): print(person)
-            case .failure(let error): print(error)
-            }
+extension ViewController: MeshEngineDelegate {
+    
+    func didReceived(syncable: Syncable) {
+        switch SyncType.init(syncable: syncable) {
+        case .news(let news):   print(news.text)
+        case .needs(let needs): print(needs.text)
+        case .user(let user):   print(user.text)
+        case .none(): break
+        }
+    }
+    
+    func didConnected(id: String) {
+        // 繋がったら Realm からデータを全件取得して、データ別に全送信
+    }
+}
+
+enum SyncType {
+    case news(News)
+    case needs(Needs)
+    case user(User)
+    case none()
+    init(syncable: Syncable) {
+        if syncable is News {
+            self = .news(syncable as! News)
+            return
         }
         
-    }
-    
-    func realm(){
-        userdb.registerUserInfo(name: "kc", age: 200, gender: "boy")
-        for (key,val) in userdb.getAllUser(){
-            print("\(key)=>\(val)")
+        if syncable is Needs {
+            self = .needs(syncable as! Needs)
+            return
         }
-    }
-    
-    
-    func twitter(){
-        let request = TwitterAPI.TwitterEnum.all()
-        Session.send(request) { result in
-            switch result {
-            case .success(let twitter): print(twitter)
-            case .failure(let error): print(error)
-            }
+        
+        if syncable is User {
+            self = .user(syncable as! User)
+            return
         }
+        
+        self = .none()
     }
 }

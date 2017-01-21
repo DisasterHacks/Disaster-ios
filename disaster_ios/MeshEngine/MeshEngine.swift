@@ -50,7 +50,12 @@ class MeshEngine: NSObject, MeshEngineable {
     }
     
     // peer
-    var peerId: MCPeerID = MCPeerID(displayName: UUID.init().uuidString)
+    var peerId: MCPeerID = MCPeerID(displayName: UUID.init().uuidString) {
+        didSet {
+            self.session          = MCSession(peer: self.peerId, securityIdentity: nil, encryptionPreference: .none)
+            self.session.delegate = self
+        }
+    }
     
     var session: MCSession
     var nearByBrowser:   MCNearbyServiceBrowser!
@@ -125,7 +130,7 @@ extension MeshEngine: MCSessionDelegate {
             self.delegate.didConnected(id: peerID.displayName)
             print("繋がったら、Realm から全件取得してデータのタイプに応じて接続ユーザに対して全送信")
         case .connecting: break
-        case .notConnected: break
+        case .notConnected: print("接続失敗")
         }
     }
     

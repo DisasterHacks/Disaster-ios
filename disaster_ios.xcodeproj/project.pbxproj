@@ -14,6 +14,8 @@
 		5F189BB81E312F14000142C9 /* HimotokiSampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F189BB71E312F14000142C9 /* HimotokiSampleController.swift */; };
 		5F189BBA1E31903B000142C9 /* sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F189BB91E31903B000142C9 /* sample.swift */; };
 		5F189BBC1E32159A000142C9 /* realmSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F189BBB1E32159A000142C9 /* realmSample.swift */; };
+		5F189BBF1E3351EE000142C9 /* TwitterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F189BBE1E3351EE000142C9 /* TwitterAPI.swift */; };
+		5F189BC11E3357F1000142C9 /* InternalAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F189BC01E3357F1000142C9 /* InternalAPI.swift */; };
 		5F7BFD6C1E30E3CC006F988A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BFD6B1E30E3CC006F988A /* AppDelegate.swift */; };
 		5F7BFD6E1E30E3CC006F988A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BFD6D1E30E3CC006F988A /* ViewController.swift */; };
 		5F7BFD711E30E3CC006F988A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F7BFD6F1E30E3CC006F988A /* Main.storyboard */; };
@@ -58,6 +60,8 @@
 		5F189BB71E312F14000142C9 /* HimotokiSampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HimotokiSampleController.swift; sourceTree = "<group>"; };
 		5F189BB91E31903B000142C9 /* sample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sample.swift; sourceTree = "<group>"; };
 		5F189BBB1E32159A000142C9 /* realmSample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = realmSample.swift; sourceTree = "<group>"; };
+		5F189BBE1E3351EE000142C9 /* TwitterAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAPI.swift; sourceTree = "<group>"; };
+		5F189BC01E3357F1000142C9 /* InternalAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternalAPI.swift; sourceTree = "<group>"; };
 		5F7BFD681E30E3CC006F988A /* disaster_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = disaster_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F7BFD6B1E30E3CC006F988A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F7BFD6D1E30E3CC006F988A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +154,15 @@
 			path = Realm;
 			sourceTree = "<group>";
 		};
+		5F189BC21E3357F7000142C9 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				5F189BC01E3357F1000142C9 /* InternalAPI.swift */,
+				5F189BBE1E3351EE000142C9 /* TwitterAPI.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
 		5F7BFD5F1E30E3CC006F988A = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +187,7 @@
 		5F7BFD6A1E30E3CC006F988A /* disaster_ios */ = {
 			isa = PBXGroup;
 			children = (
+				5F189BC21E3357F7000142C9 /* API */,
 				75C588E31E334FB2008C7DA0 /* MeshEngine */,
 				75C588E01E334BD5008C7DA0 /* Models */,
 				75C588D51E334A34008C7DA0 /* Syncable */,
@@ -408,6 +422,8 @@
 			files = (
 				5F189BB61E31222D000142C9 /* Weather.swift in Sources */,
 				75C588DD1E334A8F008C7DA0 /* Needs.swift in Sources */,
+				5F189BBF1E3351EE000142C9 /* TwitterAPI.swift in Sources */,
+				5F189BC11E3357F1000142C9 /* InternalAPI.swift in Sources */,
 				5F189BBA1E31903B000142C9 /* sample.swift in Sources */,
 				75C588D91E334A70008C7DA0 /* Syncable.swift in Sources */,
 				75C588DB1E334A84008C7DA0 /* News.swift in Sources */,

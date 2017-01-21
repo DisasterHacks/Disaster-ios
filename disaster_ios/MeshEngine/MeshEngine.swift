@@ -61,3 +61,34 @@ extension MeshEngine: MCNearbyServiceAdvertiserDelegate {
         invitationHandler(true, self.session)
     }
 }
+
+extension MeshEngine: MCSessionDelegate {
+    
+    func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
+        switch state {
+        case .connected: print("繋がったら、Realm から全件取得してデータのタイプに応じて接続ユーザに対して全送信")
+        case .connecting: break
+        case .notConnected: break
+        }
+    }
+    
+    // received
+    func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
+        // decode
+        guard let syncable = NSKeyedUnarchiver.unarchiveObject(with: data) as? Syncable else {
+            return
+        }
+        
+        DispatchQueue.main.async { [weak self] in
+            guard let `self` = self else {
+                return
+            }
+            
+            // ここで self.delegate なりを実装して受信後の処理を委託
+        }
+    }
+    
+    func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) { }
+    func session(_ session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, with progress: Progress) { }
+    func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL, withError error: Error?) { }
+}

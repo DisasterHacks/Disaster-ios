@@ -54,3 +54,10 @@ extension MeshEngine: MCNearbyServiceBrowserDelegate {
         browser.invitePeer(peerID, to: self.session, withContext: nil, timeout: 0)
     }
 }
+
+extension MeshEngine: MCNearbyServiceAdvertiserDelegate {
+    // allow automatic connection
+    public func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
+        invitationHandler(true, self.session)
+    }
+}

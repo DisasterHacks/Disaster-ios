@@ -19,15 +19,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("きたー！")
-        himotoki()
-        realm()
-        // Do any additional setup after loading the view, typically from a nib.
+        //himotoki()
+        //realm()
+        twitter()
     }
     
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 
@@ -35,14 +34,6 @@ class ViewController: UIViewController {
 
 extension ViewController{
     func himotoki(){
-        /*
-        let json: [String: AnyObject] = [ "name": "taro" as AnyObject, "age": 22 as AnyObject ]
-        let person: Person? = try? Person.decodeValue(json)
-        if( person != nil){
-            print("name:\(person!.name) age:\(person!.age)")  //name:taro age:22
-        }else{
-            print("error")
-        }*/
         let request = PersonAPI.PersonEnum.all()
         Session.send(request) { result in
             switch result {
@@ -59,5 +50,15 @@ extension ViewController{
             print("\(key)=>\(val)")
         }
     }
-
+    
+    
+    func twitter(){
+        let request = TwitterAPI.TwitterEnum.all()
+        Session.send(request) { result in
+            switch result {
+            case .success(let twitter): print(twitter)
+            case .failure(let error): print(error)
+            }
+        }
+    }
 }

@@ -28,6 +28,8 @@
 		5F189BE11E33F3D6000142C9 /* tokyo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F189BE01E33F3D6000142C9 /* tokyo.png */; };
 		5F189BE41E33FC16000142C9 /* top.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F189BE31E33FC16000142C9 /* top.png */; };
 		5F189BE71E33FC32000142C9 /* topController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F189BE61E33FC32000142C9 /* topController.swift */; };
+		5F189BEA1E33FEFE000142C9 /* myInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F189BE91E33FEFE000142C9 /* myInfoController.swift */; };
+		5F189BEC1E340C72000142C9 /* gazo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F189BEB1E340C72000142C9 /* gazo.png */; };
 		5F7BFD6C1E30E3CC006F988A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BFD6B1E30E3CC006F988A /* AppDelegate.swift */; };
 		5F7BFD6E1E30E3CC006F988A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BFD6D1E30E3CC006F988A /* ViewController.swift */; };
 		5F7BFD711E30E3CC006F988A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F7BFD6F1E30E3CC006F988A /* Main.storyboard */; };
@@ -93,6 +95,8 @@
 		5F189BE01E33F3D6000142C9 /* tokyo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tokyo.png; sourceTree = "<group>"; };
 		5F189BE31E33FC16000142C9 /* top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top.png; sourceTree = "<group>"; };
 		5F189BE61E33FC32000142C9 /* topController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = topController.swift; sourceTree = "<group>"; };
+		5F189BE91E33FEFE000142C9 /* myInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myInfoController.swift; sourceTree = "<group>"; };
+		5F189BEB1E340C72000142C9 /* gazo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gazo.png; sourceTree = "<group>"; };
 		5F7BFD681E30E3CC006F988A /* disaster_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = disaster_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F7BFD6B1E30E3CC006F988A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F7BFD6D1E30E3CC006F988A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -254,6 +258,7 @@
 		5F189BCF1E33911E000142C9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5F189BE81E33FEDC000142C9 /* myInfo */,
 				5F189BE51E33FC23000142C9 /* top */,
 				5F189BD01E339132000142C9 /* Info */,
 			);
@@ -296,6 +301,15 @@
 				5F189BE61E33FC32000142C9 /* topController.swift */,
 			);
 			name = top;
+			sourceTree = "<group>";
+		};
+		5F189BE81E33FEDC000142C9 /* myInfo */ = {
+			isa = PBXGroup;
+			children = (
+				5F189BEB1E340C72000142C9 /* gazo.png */,
+				5F189BE91E33FEFE000142C9 /* myInfoController.swift */,
+			);
+			name = myInfo;
 			sourceTree = "<group>";
 		};
 		5F7BFD5F1E30E3CC006F988A = {
@@ -544,6 +558,7 @@
 				5F189BD41E3396EA000142C9 /* InfoCell.xib in Resources */,
 				5F189BE11E33F3D6000142C9 /* tokyo.png in Resources */,
 				5F189BE41E33FC16000142C9 /* top.png in Resources */,
+				5F189BEC1E340C72000142C9 /* gazo.png in Resources */,
 				5F7BFD731E30E3CC006F988A /* Assets.xcassets in Resources */,
 				5F7BFD711E30E3CC006F988A /* Main.storyboard in Resources */,
 				5F189BDD1E33B70B000142C9 /* infoCell2.xib in Resources */,
@@ -621,6 +636,7 @@
 				5F189BBC1E32159A000142C9 /* realmSample.swift in Sources */,
 				75C588E51E334FF9008C7DA0 /* MeshEngine.swift in Sources */,
 				5F7BFD6C1E30E3CC006F988A /* AppDelegate.swift in Sources */,
+				5F189BEA1E33FEFE000142C9 /* myInfoController.swift in Sources */,
 				75C588DF1E334AA4008C7DA0 /* User.swift in Sources */,
 				5F189BCC1E33670A000142C9 /* shelterHimotoki.swift in Sources */,
 			);

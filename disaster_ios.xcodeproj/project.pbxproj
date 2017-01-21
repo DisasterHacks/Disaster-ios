@@ -25,6 +25,11 @@
 		5F7BFD9D1E30F768006F988A /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F7BFD9C1E30F768006F988A /* APIKit.framework */; };
 		5F7BFD9F1E30F773006F988A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F7BFD9E1E30F773006F988A /* RxSwift.framework */; };
 		5F7BFDA11E30F77E006F988A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F7BFDA01E30F77E006F988A /* RealmSwift.framework */; };
+		75C588D91E334A70008C7DA0 /* Syncable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C588D81E334A70008C7DA0 /* Syncable.swift */; };
+		75C588DB1E334A84008C7DA0 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C588DA1E334A84008C7DA0 /* News.swift */; };
+		75C588DD1E334A8F008C7DA0 /* Needs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C588DC1E334A8F008C7DA0 /* Needs.swift */; };
+		75C588DF1E334AA4008C7DA0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C588DE1E334AA4008C7DA0 /* User.swift */; };
+		75C588E21E334CF9008C7DA0 /* Shelter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C588E11E334CF9008C7DA0 /* Shelter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +74,11 @@
 		5F7BFD9C1E30F768006F988A /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		5F7BFD9E1E30F773006F988A /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		5F7BFDA01E30F77E006F988A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		75C588D81E334A70008C7DA0 /* Syncable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Syncable.swift; path = Syncable/Syncable.swift; sourceTree = "<group>"; };
+		75C588DA1E334A84008C7DA0 /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = News.swift; path = Syncable/News.swift; sourceTree = "<group>"; };
+		75C588DC1E334A8F008C7DA0 /* Needs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Needs.swift; path = Syncable/Needs.swift; sourceTree = "<group>"; };
+		75C588DE1E334AA4008C7DA0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Syncable/User.swift; sourceTree = "<group>"; };
+		75C588E11E334CF9008C7DA0 /* Shelter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shelter.swift; path = Models/Shelter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +172,8 @@
 		5F7BFD6A1E30E3CC006F988A /* disaster_ios */ = {
 			isa = PBXGroup;
 			children = (
+				75C588E01E334BD5008C7DA0 /* Models */,
+				75C588D51E334A34008C7DA0 /* Syncable */,
 				5F189BAE1E3121D9000142C9 /* samplr */,
 				5F7BFD6B1E30E3CC006F988A /* AppDelegate.swift */,
 				5F7BFD721E30E3CC006F988A /* Assets.xcassets */,
@@ -202,6 +214,25 @@
 				5F7BFD9A1E30F756006F988A /* Himotoki.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		75C588D51E334A34008C7DA0 /* Syncable */ = {
+			isa = PBXGroup;
+			children = (
+				75C588DA1E334A84008C7DA0 /* News.swift */,
+				75C588DC1E334A8F008C7DA0 /* Needs.swift */,
+				75C588DE1E334AA4008C7DA0 /* User.swift */,
+				75C588D81E334A70008C7DA0 /* Syncable.swift */,
+			);
+			name = Syncable;
+			sourceTree = "<group>";
+		};
+		75C588E01E334BD5008C7DA0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				75C588E11E334CF9008C7DA0 /* Shelter.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,7 +304,7 @@
 				TargetAttributes = {
 					5F7BFD671E30E3CC006F988A = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = EJ4A4267M6;
+						DevelopmentTeam = 7SYG4Q97TY;
 						ProvisioningStyle = Automatic;
 					};
 					5F7BFD7B1E30E3CC006F988A = {
@@ -365,12 +396,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F189BB61E31222D000142C9 /* Weather.swift in Sources */,
+				75C588DD1E334A8F008C7DA0 /* Needs.swift in Sources */,
 				5F189BBA1E31903B000142C9 /* sample.swift in Sources */,
+				75C588D91E334A70008C7DA0 /* Syncable.swift in Sources */,
+				75C588DB1E334A84008C7DA0 /* News.swift in Sources */,
 				5F189BB31E312217000142C9 /* APIKitSampleController.swift in Sources */,
 				5F7BFD6E1E30E3CC006F988A /* ViewController.swift in Sources */,
+				75C588E21E334CF9008C7DA0 /* Shelter.swift in Sources */,
 				5F189BB81E312F14000142C9 /* HimotokiSampleController.swift in Sources */,
 				5F189BBC1E32159A000142C9 /* realmSample.swift in Sources */,
 				5F7BFD6C1E30E3CC006F988A /* AppDelegate.swift in Sources */,
+				75C588DF1E334AA4008C7DA0 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,7 +558,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = EJ4A4267M6;
+				DEVELOPMENT_TEAM = 7SYG4Q97TY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -539,7 +575,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = EJ4A4267M6;
+				DEVELOPMENT_TEAM = 7SYG4Q97TY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

@@ -30,6 +30,7 @@
 		75C588DD1E334A8F008C7DA0 /* Needs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C588DC1E334A8F008C7DA0 /* Needs.swift */; };
 		75C588DF1E334AA4008C7DA0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C588DE1E334AA4008C7DA0 /* User.swift */; };
 		75C588E21E334CF9008C7DA0 /* Shelter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C588E11E334CF9008C7DA0 /* Shelter.swift */; };
+		75C588E51E334FF9008C7DA0 /* MeshEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C588E41E334FF9008C7DA0 /* MeshEngine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		75C588DC1E334A8F008C7DA0 /* Needs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Needs.swift; path = Syncable/Needs.swift; sourceTree = "<group>"; };
 		75C588DE1E334AA4008C7DA0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Syncable/User.swift; sourceTree = "<group>"; };
 		75C588E11E334CF9008C7DA0 /* Shelter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shelter.swift; path = Models/Shelter.swift; sourceTree = "<group>"; };
+		75C588E41E334FF9008C7DA0 /* MeshEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeshEngine.swift; path = MeshEngine/MeshEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 		5F7BFD6A1E30E3CC006F988A /* disaster_ios */ = {
 			isa = PBXGroup;
 			children = (
+				75C588E31E334FB2008C7DA0 /* MeshEngine */,
 				75C588E01E334BD5008C7DA0 /* Models */,
 				75C588D51E334A34008C7DA0 /* Syncable */,
 				5F189BAE1E3121D9000142C9 /* samplr */,
@@ -233,6 +236,14 @@
 				75C588E11E334CF9008C7DA0 /* Shelter.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		75C588E31E334FB2008C7DA0 /* MeshEngine */ = {
+			isa = PBXGroup;
+			children = (
+				75C588E41E334FF9008C7DA0 /* MeshEngine.swift */,
+			);
+			name = MeshEngine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,6 +416,7 @@
 				75C588E21E334CF9008C7DA0 /* Shelter.swift in Sources */,
 				5F189BB81E312F14000142C9 /* HimotokiSampleController.swift in Sources */,
 				5F189BBC1E32159A000142C9 /* realmSample.swift in Sources */,
+				75C588E51E334FF9008C7DA0 /* MeshEngine.swift in Sources */,
 				5F7BFD6C1E30E3CC006F988A /* AppDelegate.swift in Sources */,
 				75C588DF1E334AA4008C7DA0 /* User.swift in Sources */,
 			);

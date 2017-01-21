@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 import Realm
 
-class User: Object, Syncable {
+class User: NSObject, Syncable {
     
     var id: String   = ""
     var text: String = ""
@@ -29,17 +29,5 @@ class User: Object, Syncable {
         self.id   = aDecoder.decodeObject(forKey: "id")   as? String ?? ""
         self.text = aDecoder.decodeObject(forKey: "text") as? String ?? ""
         super.init()
-    }
-    
-    required init() {
-        super.init()
-    }
-    
-    required init(value: Any, schema: RLMSchema) {
-        super.init(value: value, schema: schema)
-    }
-    
-    required init(realm: RLMRealm, schema: RLMObjectSchema) {
-        super.init(realm: realm, schema: schema)
     }
 }

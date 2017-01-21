@@ -9,5 +9,6 @@
 import Foundation
 
 class UserRealmModel: RealmModel {
-    dynamic var name = ""
+    dynamic var name      = ""
+    dynamic var shelterId = ""
 }

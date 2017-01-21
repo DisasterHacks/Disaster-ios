@@ -33,14 +33,54 @@ class MeshEngine: NSObject, MeshEngineable {
     // singleton
     static let shared: MeshEngine = MeshEngine()
     
+    // service name
+    var serviceName: String = "MeshKit" {
+        didSet {
+            self.joinMeshNetwork()
+        }
+    }
+    
+    var id: String {
+        set(newValue) {
+            self.peerId = MCPeerID(displayName: newValue)
+        }
+        get {
+            return self.peerId.displayName
+        }
+    }
+    
     // peer
     var peerId: MCPeerID = MCPeerID(displayName: UUID.init().uuidString)
     
     var session: MCSession
+    var nearByBrowser:   MCNearbyServiceBrowser!
+    var nearByAdveriser: MCNearbyServiceAdvertiser!
 
+    // delegate
+    var delegate: MeshEngineDelegate! = nil
+    
     private override init() {
         self.session = MCSession(peer: self.peerId, securityIdentity: nil, encryptionPreference: .none)
         super.init()
+    }
+    
+    func joinMeshNetwork() {
+        self.startSearchConnectionUser()
+        self.startAdvertisingPeer()
+    }
+    
+    // peripheral
+    func startSearchConnectionUser() {
+        self.nearByBrowser          = MCNearbyServiceBrowser(peer: self.peerId, serviceType: self.serviceName)
+        self.nearByBrowser.delegate = self
+        self.nearByBrowser.startBrowsingForPeers()
+    }
+    
+    // central
+    func startAdvertisingPeer() {
+        self.nearByAdveriser          = MCNearbyServiceAdvertiser(peer: self.peerId, discoveryInfo: nil, serviceType: self.serviceName)
+        self.nearByAdveriser.delegate = self
+        self.nearByAdveriser.startAdvertisingPeer()
     }
     
     func send<T: Syncable>(syncable: T) {
@@ -49,7 +89,9 @@ class MeshEngine: NSObject, MeshEngineable {
         }
         
         do {
+            self.delegate.willSend(syncable: syncable)
             try self.session.send(data, toPeers: self.session.connectedPeers, with: .reliable)
+            self.delegate.didSent(syncable: syncable)
         } catch {
             print("send error")
         }
@@ -79,7 +121,9 @@ extension MeshEngine: MCSessionDelegate {
     
     func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
         switch state {
-        case .connected: print("繋がったら、Realm から全件取得してデータのタイプに応じて接続ユーザに対して全送信")
+        case .connected:
+            self.delegate.didConnected(id: peerID.displayName)
+            print("繋がったら、Realm から全件取得してデータのタイプに応じて接続ユーザに対して全送信")
         case .connecting: break
         case .notConnected: break
         }
@@ -97,7 +141,7 @@ extension MeshEngine: MCSessionDelegate {
                 return
             }
             
-            // ここで self.delegate なりを実装して受信後の処理を委託
+            `self`.delegate.didReceived(syncable: syncable)
         }
     }
     

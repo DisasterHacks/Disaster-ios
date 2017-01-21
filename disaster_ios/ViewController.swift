@@ -21,7 +21,9 @@ class ViewController: UIViewController {
         print("きたー！")
         //himotoki()
         //realm()
-        twitter()
+       // twitter()
+        shelter()
+        print("ok")
     }
     
 
@@ -33,6 +35,21 @@ class ViewController: UIViewController {
 }
 
 extension ViewController{
+    
+    
+    func shelter(){
+        let request = ShelterAPI.ShelterEnum.all()
+        Session.send(request) { result in
+            switch result {
+            case .success(let shel):
+                print(shel)
+                print(shel.list[0].name)
+            case .failure(let error): print(error)
+            }
+        }
+
+        
+    }
     func himotoki(){
         let request = PersonAPI.PersonEnum.all()
         Session.send(request) { result in
@@ -41,6 +58,8 @@ extension ViewController{
             case .failure(let error): print(error)
             }
         }
+        
+        
         
     }
     

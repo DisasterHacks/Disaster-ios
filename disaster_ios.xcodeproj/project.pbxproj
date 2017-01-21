@@ -26,6 +26,8 @@
 		5F189BDD1E33B70B000142C9 /* infoCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F189BDC1E33B70B000142C9 /* infoCell2.xib */; };
 		5F189BDF1E33B7F3000142C9 /* infoCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F189BDE1E33B7F3000142C9 /* infoCell2.swift */; };
 		5F189BE11E33F3D6000142C9 /* tokyo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F189BE01E33F3D6000142C9 /* tokyo.png */; };
+		5F189BE41E33FC16000142C9 /* top.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F189BE31E33FC16000142C9 /* top.png */; };
+		5F189BE71E33FC32000142C9 /* topController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F189BE61E33FC32000142C9 /* topController.swift */; };
 		5F7BFD6C1E30E3CC006F988A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BFD6B1E30E3CC006F988A /* AppDelegate.swift */; };
 		5F7BFD6E1E30E3CC006F988A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BFD6D1E30E3CC006F988A /* ViewController.swift */; };
 		5F7BFD711E30E3CC006F988A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F7BFD6F1E30E3CC006F988A /* Main.storyboard */; };
@@ -89,6 +91,8 @@
 		5F189BDC1E33B70B000142C9 /* infoCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = infoCell2.xib; sourceTree = "<group>"; };
 		5F189BDE1E33B7F3000142C9 /* infoCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = infoCell2.swift; sourceTree = "<group>"; };
 		5F189BE01E33F3D6000142C9 /* tokyo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tokyo.png; sourceTree = "<group>"; };
+		5F189BE31E33FC16000142C9 /* top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top.png; sourceTree = "<group>"; };
+		5F189BE61E33FC32000142C9 /* topController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = topController.swift; sourceTree = "<group>"; };
 		5F7BFD681E30E3CC006F988A /* disaster_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = disaster_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F7BFD6B1E30E3CC006F988A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F7BFD6D1E30E3CC006F988A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -250,6 +254,7 @@
 		5F189BCF1E33911E000142C9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5F189BE51E33FC23000142C9 /* top */,
 				5F189BD01E339132000142C9 /* Info */,
 			);
 			name = Controller;
@@ -277,6 +282,22 @@
 			name = extension;
 			sourceTree = "<group>";
 		};
+		5F189BE21E33FC08000142C9 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				5F189BE31E33FC16000142C9 /* top.png */,
+			);
+			name = resource;
+			sourceTree = "<group>";
+		};
+		5F189BE51E33FC23000142C9 /* top */ = {
+			isa = PBXGroup;
+			children = (
+				5F189BE61E33FC32000142C9 /* topController.swift */,
+			);
+			name = top;
+			sourceTree = "<group>";
+		};
 		5F7BFD5F1E30E3CC006F988A = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +322,7 @@
 		5F7BFD6A1E30E3CC006F988A /* disaster_ios */ = {
 			isa = PBXGroup;
 			children = (
+				5F189BE21E33FC08000142C9 /* resource */,
 				5F189BD71E339978000142C9 /* extension */,
 				5F189BCF1E33911E000142C9 /* Controller */,
 				75C588F21E33780D008C7DA0 /* Utils */,
@@ -521,6 +543,7 @@
 				5F7BFD761E30E3CC006F988A /* LaunchScreen.storyboard in Resources */,
 				5F189BD41E3396EA000142C9 /* InfoCell.xib in Resources */,
 				5F189BE11E33F3D6000142C9 /* tokyo.png in Resources */,
+				5F189BE41E33FC16000142C9 /* top.png in Resources */,
 				5F7BFD731E30E3CC006F988A /* Assets.xcassets in Resources */,
 				5F7BFD711E30E3CC006F988A /* Main.storyboard in Resources */,
 				5F189BDD1E33B70B000142C9 /* infoCell2.xib in Resources */,
@@ -587,6 +610,7 @@
 				5F189BB31E312217000142C9 /* APIKitSampleController.swift in Sources */,
 				75C588EB1E3375B7008C7DA0 /* NewsRealmModel.swift in Sources */,
 				75C588ED1E3375CE008C7DA0 /* NeedsRealmModel.swift in Sources */,
+				5F189BE71E33FC32000142C9 /* topController.swift in Sources */,
 				5F7BFD6E1E30E3CC006F988A /* ViewController.swift in Sources */,
 				5F189BCE1E338398000142C9 /* InfoController.swift in Sources */,
 				75C588F41E337820008C7DA0 /* RealmExtension.swift in Sources */,

@@ -7,6 +7,21 @@
 //
 
 import Foundation
-
+import APIKit
 
 //url = http://153.120.62.197/cruster/twitterData.php
+
+
+protocol TwitterRequest:Request{
+    
+}
+
+extension TwitterRequest{
+    var baseURL:URL{
+        return URL(string:"http://153.120.62.197/cruster/twitterData.php")!
+    }
+}
+
+struct PersonAPI{
+    typealias Parameters = [String:Any?]
+}

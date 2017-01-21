@@ -157,10 +157,26 @@
 		5F189BC21E3357F7000142C9 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				5F189BC01E3357F1000142C9 /* InternalAPI.swift */,
-				5F189BBE1E3351EE000142C9 /* TwitterAPI.swift */,
+				5F189BC41E3359F5000142C9 /* twitter */,
+				5F189BC31E3359E9000142C9 /* shelter */,
 			);
 			name = API;
+			sourceTree = "<group>";
+		};
+		5F189BC31E3359E9000142C9 /* shelter */ = {
+			isa = PBXGroup;
+			children = (
+				5F189BC01E3357F1000142C9 /* InternalAPI.swift */,
+			);
+			name = shelter;
+			sourceTree = "<group>";
+		};
+		5F189BC41E3359F5000142C9 /* twitter */ = {
+			isa = PBXGroup;
+			children = (
+				5F189BBE1E3351EE000142C9 /* TwitterAPI.swift */,
+			);
+			name = twitter;
 			sourceTree = "<group>";
 		};
 		5F7BFD5F1E30E3CC006F988A = {

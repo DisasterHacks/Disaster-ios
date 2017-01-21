@@ -9,6 +9,19 @@
 import Foundation
 import MultipeerConnectivity
 
+protocol MeshEngineDelegate {
+    func willSend(syncable: Syncable)
+    func didSent(syncable: Syncable)
+    func didReceived(syncable: Syncable)
+    func didConnected(id: String)
+}
+
+extension MeshEngineDelegate {
+    func willSend(syncable: Syncable) { }
+    func didSent(syncable: Syncable) { }
+    func didConnected(id: String) { }
+}
+
 protocol MeshEngineable: class {
     var peerId: MCPeerID { get set }
     func send<T: Syncable>(syncable: T)

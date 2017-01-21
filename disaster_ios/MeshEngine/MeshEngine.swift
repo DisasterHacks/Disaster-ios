@@ -42,3 +42,22 @@ class MeshEngine: NSObject, MeshEngineable {
         }
     }
 }
+
+extension MeshEngine: MCNearbyServiceBrowserDelegate {
+    // peer lost
+    public func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
+        print("lost peer is \(peerID.displayName)")
+    }
+    
+    // automatic connection
+    public func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
+        browser.invitePeer(peerID, to: self.session, withContext: nil, timeout: 0)
+    }
+}
+
+extension MeshEngine: MCNearbyServiceAdvertiserDelegate {
+    // allow automatic connection
+    public func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
+        invitationHandler(true, self.session)
+    }
+}

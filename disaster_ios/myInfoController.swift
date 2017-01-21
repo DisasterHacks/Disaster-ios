@@ -44,6 +44,7 @@ class MyInfoViewController: UIViewController {
     func setView(){
         var slabel = UILabel(frame:CGRect(x:self.view.frame.size.width/3,y:15,width:self.view.frame.size.width/3,height:30))
         slabel.text = "自分の情報"
+        slabel.textAlignment = .center
         slabel.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
         self.view.addSubview(slabel)
         //注釈

@@ -41,12 +41,14 @@ class SyncEngine: Realmable {
         case news
         case needs
         case user
+        case shelter
         
         func getAll() -> RealmModelable {
             switch self {
-            case .news:  return Realm.objects(NewsRealmModel.self) as! RealmModelable
-            case .needs: return Realm.objects(NeedsRealmModel.self) as! RealmModelable
-            case .user:  return Realm.objects(UserRealmModel.self) as! RealmModelable
+            case .news:  return   Realm.objects(NewsRealmModel.self)    as! RealmModelable
+            case .needs: return   Realm.objects(NeedsRealmModel.self)   as! RealmModelable
+            case .user:  return   Realm.objects(UserRealmModel.self)    as! RealmModelable
+            case .shelter: return Realm.objects(ShelterRealmModel.self) as! RealmModelable
             }
         }
     }

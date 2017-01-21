@@ -49,6 +49,7 @@
 		75C588EF1E3375DD008C7DA0 /* UserRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C588EE1E3375DD008C7DA0 /* UserRealmModel.swift */; };
 		75C588F11E337660008C7DA0 /* SyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C588F01E337660008C7DA0 /* SyncEngine.swift */; };
 		75C588F41E337820008C7DA0 /* RealmExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C588F31E337820008C7DA0 /* RealmExtension.swift */; };
+		75C588F61E339573008C7DA0 /* ShelterRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C588F51E339573008C7DA0 /* ShelterRealmModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,7 @@
 		75C588EE1E3375DD008C7DA0 /* UserRealmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserRealmModel.swift; path = Models/RealmModels/UserRealmModel.swift; sourceTree = "<group>"; };
 		75C588F01E337660008C7DA0 /* SyncEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SyncEngine.swift; path = SyncEngine/SyncEngine.swift; sourceTree = "<group>"; };
 		75C588F31E337820008C7DA0 /* RealmExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmExtension.swift; path = Utils/RealmExtension.swift; sourceTree = "<group>"; };
+		75C588F51E339573008C7DA0 /* ShelterRealmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShelterRealmModel.swift; path = Models/RealmModels/ShelterRealmModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -392,6 +394,7 @@
 				75C588EA1E3375B7008C7DA0 /* NewsRealmModel.swift */,
 				75C588EC1E3375CE008C7DA0 /* NeedsRealmModel.swift */,
 				75C588EE1E3375DD008C7DA0 /* UserRealmModel.swift */,
+				75C588F51E339573008C7DA0 /* ShelterRealmModel.swift */,
 			);
 			name = RealmModels;
 			sourceTree = "<group>";
@@ -571,6 +574,7 @@
 				5F189BD91E339981000142C9 /* Extensions.swift in Sources */,
 				5F189BB61E31222D000142C9 /* Weather.swift in Sources */,
 				75C588DD1E334A8F008C7DA0 /* Needs.swift in Sources */,
+				75C588F61E339573008C7DA0 /* ShelterRealmModel.swift in Sources */,
 				5F189BBF1E3351EE000142C9 /* TwitterAPI.swift in Sources */,
 				5F189BC11E3357F1000142C9 /* InternalAPI.swift in Sources */,
 				5F189BBA1E31903B000142C9 /* sample.swift in Sources */,

@@ -16,6 +16,7 @@
 		5F189BBC1E32159A000142C9 /* realmSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F189BBB1E32159A000142C9 /* realmSample.swift */; };
 		5F189BBF1E3351EE000142C9 /* TwitterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F189BBE1E3351EE000142C9 /* TwitterAPI.swift */; };
 		5F189BC11E3357F1000142C9 /* InternalAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F189BC01E3357F1000142C9 /* InternalAPI.swift */; };
+		5F189BC71E336075000142C9 /* TwitterHimotoki.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F189BC61E336075000142C9 /* TwitterHimotoki.swift */; };
 		5F7BFD6C1E30E3CC006F988A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BFD6B1E30E3CC006F988A /* AppDelegate.swift */; };
 		5F7BFD6E1E30E3CC006F988A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BFD6D1E30E3CC006F988A /* ViewController.swift */; };
 		5F7BFD711E30E3CC006F988A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F7BFD6F1E30E3CC006F988A /* Main.storyboard */; };
@@ -62,6 +63,7 @@
 		5F189BBB1E32159A000142C9 /* realmSample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = realmSample.swift; sourceTree = "<group>"; };
 		5F189BBE1E3351EE000142C9 /* TwitterAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAPI.swift; sourceTree = "<group>"; };
 		5F189BC01E3357F1000142C9 /* InternalAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternalAPI.swift; sourceTree = "<group>"; };
+		5F189BC61E336075000142C9 /* TwitterHimotoki.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterHimotoki.swift; sourceTree = "<group>"; };
 		5F7BFD681E30E3CC006F988A /* disaster_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = disaster_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F7BFD6B1E30E3CC006F988A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F7BFD6D1E30E3CC006F988A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -174,9 +176,26 @@
 		5F189BC41E3359F5000142C9 /* twitter */ = {
 			isa = PBXGroup;
 			children = (
-				5F189BBE1E3351EE000142C9 /* TwitterAPI.swift */,
+				5F189BC81E3360D5000142C9 /* twitterAPI */,
+				5F189BC51E336055000142C9 /* himotoki */,
 			);
 			name = twitter;
+			sourceTree = "<group>";
+		};
+		5F189BC51E336055000142C9 /* himotoki */ = {
+			isa = PBXGroup;
+			children = (
+				5F189BC61E336075000142C9 /* TwitterHimotoki.swift */,
+			);
+			name = himotoki;
+			sourceTree = "<group>";
+		};
+		5F189BC81E3360D5000142C9 /* twitterAPI */ = {
+			isa = PBXGroup;
+			children = (
+				5F189BBE1E3351EE000142C9 /* TwitterAPI.swift */,
+			);
+			name = twitterAPI;
 			sourceTree = "<group>";
 		};
 		5F7BFD5F1E30E3CC006F988A = {
@@ -443,6 +462,7 @@
 				5F189BBA1E31903B000142C9 /* sample.swift in Sources */,
 				75C588D91E334A70008C7DA0 /* Syncable.swift in Sources */,
 				75C588DB1E334A84008C7DA0 /* News.swift in Sources */,
+				5F189BC71E336075000142C9 /* TwitterHimotoki.swift in Sources */,
 				5F189BB31E312217000142C9 /* APIKitSampleController.swift in Sources */,
 				5F7BFD6E1E30E3CC006F988A /* ViewController.swift in Sources */,
 				75C588E21E334CF9008C7DA0 /* Shelter.swift in Sources */,

@@ -89,7 +89,9 @@ class MeshEngine: NSObject, MeshEngineable {
         }
         
         do {
+            self.delegate.willSend(syncable: syncable)
             try self.session.send(data, toPeers: self.session.connectedPeers, with: .reliable)
+            self.delegate.didSent(syncable: syncable)
         } catch {
             print("send error")
         }

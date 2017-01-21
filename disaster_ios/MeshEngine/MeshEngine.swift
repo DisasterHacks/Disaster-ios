@@ -139,7 +139,7 @@ extension MeshEngine: MCSessionDelegate {
                 return
             }
             
-            print("ここで self.delegate なりを実装して受信後の処理を委託")
+            `self`.delegate.didReceived(syncable: syncable)
         }
     }
     

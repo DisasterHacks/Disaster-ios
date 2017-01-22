@@ -30,7 +30,25 @@ class topController: UIViewController {
     
     func seni(){
         var cont = PublicInfoController()
-        self.present(cont, animated: true, completion: nil)
+        //self.present(cont, animated: true, completion: nil)
+        
+        var viewControllers: [UIViewController] = []
+        
+        // 1ページ目になるViewController
+        let firstVC = PublicInfoController()
+        firstVC.tabBarItem = UITabBarItem(title:"災害ニュース",image:nil, tag: 1)
+        viewControllers.append(firstVC)
+        
+        // 2ページ目になるViewController
+        let secondVC = MyInfoViewController()
+        secondVC.tabBarItem = UITabBarItem(title: "自分の情報", image: nil, tag: 2)
+        viewControllers.append(secondVC)
+        
+        // ページをセット
+        let tabBarController = UITabBarController()
+        tabBarController.setViewControllers(viewControllers, animated: false)
+        self.present(tabBarController, animated: true, completion: nil)
+        
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {

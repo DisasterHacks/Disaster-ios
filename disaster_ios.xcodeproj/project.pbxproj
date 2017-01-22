@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F11F2BE1E347BF700E656DC /* cominity__pen.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F11F2BD1E347BF700E656DC /* cominity__pen.png */; };
 		5F189BAB1E30FBB7000142C9 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F189BAA1E30FBB7000142C9 /* Realm.framework */; };
 		5F189BAD1E30FBD1000142C9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F189BAC1E30FBD1000142C9 /* Result.framework */; };
 		5F189BB31E312217000142C9 /* APIKitSampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F189BB21E312217000142C9 /* APIKitSampleController.swift */; };
@@ -87,6 +88,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F11F2BD1E347BF700E656DC /* cominity__pen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cominity__pen.png; sourceTree = "<group>"; };
 		5F189BAA1E30FBB7000142C9 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		5F189BAC1E30FBD1000142C9 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		5F189BB21E312217000142C9 /* APIKitSampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKitSampleController.swift; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 		5F189BE21E33FC08000142C9 /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				5F11F2BD1E347BF700E656DC /* cominity__pen.png */,
 				75C588F71E346828008C7DA0 /* cominity__user.png */,
 				5F189BE31E33FC16000142C9 /* top.png */,
 				5F189BF61E344F5E000142C9 /* news_active.png */,
@@ -575,7 +578,7 @@
 				TargetAttributes = {
 					5F7BFD671E30E3CC006F988A = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 7SYG4Q97TY;
+						DevelopmentTeam = EJ4A4267M6;
 						ProvisioningStyle = Automatic;
 					};
 					5F7BFD7B1E30E3CC006F988A = {
@@ -618,6 +621,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F189BFD1E345945000142C9 /* icon_user_active.png in Resources */,
+				5F11F2BE1E347BF700E656DC /* cominity__pen.png in Resources */,
 				5F7BFD761E30E3CC006F988A /* LaunchScreen.storyboard in Resources */,
 				5F189BFB1E345056000142C9 /* bg.png in Resources */,
 				5F189BF71E344F5E000142C9 /* news_active.png in Resources */,
@@ -866,7 +870,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7SYG4Q97TY;
+				DEVELOPMENT_TEAM = EJ4A4267M6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -884,7 +888,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7SYG4Q97TY;
+				DEVELOPMENT_TEAM = EJ4A4267M6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

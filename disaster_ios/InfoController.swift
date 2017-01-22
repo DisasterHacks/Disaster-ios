@@ -33,6 +33,17 @@ class PublicInfoController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewWillAppear(true)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        var i = 0
+        for news in SyncEngine.shared.newsAll() {
+            self.infoList[i] = InfoClass(name:UUID.init().uuidString,text: news.text)
+            i = i + 1
+        }
+
+        self.infoTableView.reloadData()
+    }
+    
     func setHeader(){
         let header = UIImageView(frame:CGRect(x:0,y:0,width:self.view.frame.size.width,height:100))
        // header.backgroundColor = UIColor.blue
@@ -110,7 +121,7 @@ class PublicInfoController: UIViewController, UITableViewDelegate, UITableViewDa
                 case .failure(let error): print(error)
             }
         }
-        
+
         self.infoTableView.reloadData()
         self.view.addSubview(infoTableView)
     }

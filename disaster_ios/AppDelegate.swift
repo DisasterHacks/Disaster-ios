@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = topController()//PublicInfoController()
         
+        print(SyncEngine.shared.newsAll())
+        
         if let _ = SyncEngine.shared.shelterAll().first {
             return true
         }

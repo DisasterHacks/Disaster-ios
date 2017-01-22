@@ -21,10 +21,10 @@ class infoCell:UITableViewCell{
         
     }
     
-    func setCell(_ infoSet:InfoClass){
+    func setCell(_ infoSet:UserInfo){
         nameLabel.text = infoSet.name
         textViewLabel.text = infoSet.text
-        dateLabel.text = infoSet.date
+        dateLabel.text = "2017年x月x日"
     }
 
     

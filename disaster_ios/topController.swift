@@ -49,7 +49,7 @@ class topController: UIViewController {
         //2ページ目
         var secI = UIImage(named:"icon_cominity_active.png")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
         var rs = resizeImage(image: secI!, newWidth: CGFloat(30.0))
-        let community = toukouController()//hinanSiteiController()
+        let community = HelpCommunicationController()//toukouController()//hinanSiteiController()
         community.tabBarItem =  UITabBarItem(title: "避難所コミュニティ", image: rs, tag: 2)
         viewControllers.append(community)
 

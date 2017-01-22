@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-class toukouController: UIViewController {
+class toukouController: UIViewController,UITextFieldDelegate {
     
     
     var tyusyaku:UIView!
     
     var touko : UITextField!
-
+    var tmpText:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
@@ -25,13 +25,18 @@ class toukouController: UIViewController {
     }
     
     func setTop(){
-        var cancelButton = UIButton(frame:CGRect(x:20,y:10,width:100,height:30))
+        var cancelButton = UIButton(frame:CGRect(x:20,y:30,width:100,height:40))
         cancelButton.setTitle("キャンセル", for: .normal)
+        cancelButton.setTitleColor(UIColorFromRGB(0x15AFEF), for:.normal)
         cancelButton.addTarget(self, action: "close", for: .touchUpInside)
         self.view.addSubview(cancelButton)
         
-        var toukouButton = UIButton(frame:CGRect(x:self.view.frame.size.width-100,y:10,width:100,height:30))
+        var toukouButton = UIButton(frame:CGRect(x:self.view.frame.size.width-100,y:30,width:100,height:40))
+        //toukouButton.
+        //toukouButton.backgroundColor = UIColor.blue
         toukouButton.setTitle("投稿", for: .normal)
+        toukouButton.setTitleColor(UIColorFromRGB(0x15AFEF), for: .normal)
+        //toukouButton.titleLabel?.textColor  = UIColorFromRGB(0x15AFEF)
         toukouButton.addTarget(self, action: "post", for: .touchUpInside)
         self.view.addSubview(toukouButton)
     }
@@ -41,19 +46,20 @@ class toukouController: UIViewController {
     }
     
     func post(){
-        
+        print("fieled=>\(touko.text)")
     }
     
     func setText(){
         
-        var topLabel = UILabel(frame:CGRect(x:0,y:0,width:self.view.frame.size.width,height:50))
+        /*var topLabel = UILabel(frame:CGRect(x:0,y:80,width:self.view.frame.size.width,height:50))
         topLabel.text = "ここに入力してください"
-        topLabel.font = UIFont.systemFont(ofSize: 17.0)
+        topLabel.font = UIFont.systemFont(ofSize: 17.0)*/
 
         
-        touko = UITextField(frame:CGRect(x:80,y:150,width:self.view.frame.size.width,height:50))
+        touko = UITextField(frame:CGRect(x:80,y:200,width:self.view.frame.size.width,height:50))
         touko.textColor = UIColorFromRGB(0x14F3FF)
-
+        touko.placeholder = "ここに入力してください"
+        touko.delegate = self
         self.view.addSubview(touko)
         
 
@@ -63,7 +69,7 @@ class toukouController: UIViewController {
     
     func setMidasi(){
         //注釈
-         tyusyaku = UIView(frame:CGRect(x:0,y:50,width:self.view.frame.size.width,height:90))
+         tyusyaku = UIView(frame:CGRect(x:0,y:90,width:self.view.frame.size.width,height:90))
         tyusyaku.backgroundColor = UIColorFromRGB(0xE6EAED)
         var tyusyakuLabel = UILabel(frame:CGRect(x:10,y:5,width:self.view.frame.size.width,height:10))
         tyusyakuLabel.text = "自身の安否情報を登録しましょう"
@@ -81,3 +87,31 @@ class toukouController: UIViewController {
     }
     
 }
+
+extension toukouController{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // キーボードを隠す
+        tmpText = textField.text!
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    // クリアボタンが押された時の処理
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
+    // テキストフィールドがフォーカスされた時の処理
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
+    // テキストフィールドでの編集が終わろうとするときの処理
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
+    }
+}
+
+

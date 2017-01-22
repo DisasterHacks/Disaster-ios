@@ -40,17 +40,26 @@ class topController: UIViewController {
         
         // 1ページ目になるViewController
         let firstVC = PublicInfoController()
-        firstVC.tabBarItem = UITabBarItem(title:"災害ニュース",image:nil, tag: 1)
+        var firstI = UIImage(named:"icon_news.png")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        var fr = resizeImage(image: firstI!, newWidth: CGFloat(30.0))
+
+        firstVC.tabBarItem = UITabBarItem(title:"災害ニュース",image:fr, tag: 1)
         viewControllers.append(firstVC)
         
         //2ページ目
-        let community = hinanSiteiController()
-        community.tabBarItem =  UITabBarItem(title: "避難所コミュニティ", image: nil, tag: 2)
+        var secI = UIImage(named:"icon_cominity_active.png")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        var rs = resizeImage(image: secI!, newWidth: CGFloat(30.0))
+        let community = toukouController()//hinanSiteiController()
+        community.tabBarItem =  UITabBarItem(title: "避難所コミュニティ", image: rs, tag: 2)
+        viewControllers.append(community)
 
+        
         
         //3ページ目になるViewController
         let secondVC = MyInfoViewController()
-        secondVC.tabBarItem = UITabBarItem(title: "自分の情報", image: nil, tag: 3)
+        var thirdI = UIImage(named:"icon_user_active.png")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        var rs1 = resizeImage(image: thirdI!, newWidth: CGFloat(30.0))
+        secondVC.tabBarItem = UITabBarItem(title: "自分の情報", image: rs1, tag: 3)
         viewControllers.append(secondVC)
        
         
@@ -97,6 +106,21 @@ extension topController: MeshEngineDelegate {
             self.meshManager.send(syncable: user)
         }
     }
+    
+    func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage {
+        
+        let scale = newWidth / image.size.width
+        let newHeight = image.size.height * scale
+        
+        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+        
+        
+        image.draw(in: CGRect(x: 0, y: 0,width: newWidth, height: newHeight))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!
+    }
 }
 
 enum SyncType {
@@ -122,4 +146,6 @@ enum SyncType {
         
         self = .none()
     }
+    
+    
 }

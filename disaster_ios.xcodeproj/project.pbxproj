@@ -32,6 +32,15 @@
 		5F189BEC1E340C72000142C9 /* gazo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F189BEB1E340C72000142C9 /* gazo.png */; };
 		5F189BEF1E3414D3000142C9 /* HelpCommunicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F189BEE1E3414D3000142C9 /* HelpCommunicationController.swift */; };
 		5F189BF21E34162C000142C9 /* hinanSiteiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F189BF11E34162C000142C9 /* hinanSiteiController.swift */; };
+		5F189BF51E344F59000142C9 /* cominity_avtive.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F189BF41E344F59000142C9 /* cominity_avtive.png */; };
+		5F189BF71E344F5E000142C9 /* news_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F189BF61E344F5E000142C9 /* news_active.png */; };
+		5F189BF91E344F63000142C9 /* user_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F189BF81E344F63000142C9 /* user_active.png */; };
+		5F189BFB1E345056000142C9 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F189BFA1E345056000142C9 /* bg.png */; };
+		5F189BFD1E345945000142C9 /* icon_user_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F189BFC1E345945000142C9 /* icon_user_active.png */; };
+		5F189BFF1E34594E000142C9 /* icon_news.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F189BFE1E34594E000142C9 /* icon_news.png */; };
+		5F189C011E345953000142C9 /* icon_cominity_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F189C001E345953000142C9 /* icon_cominity_active.png */; };
+		5F189C031E345D6F000142C9 /* userself.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F189C021E345D6F000142C9 /* userself.png */; };
+		5F189C061E345E5B000142C9 /* toukouController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F189C051E345E5B000142C9 /* toukouController.swift */; };
 		5F7BFD6C1E30E3CC006F988A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BFD6B1E30E3CC006F988A /* AppDelegate.swift */; };
 		5F7BFD6E1E30E3CC006F988A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BFD6D1E30E3CC006F988A /* ViewController.swift */; };
 		5F7BFD711E30E3CC006F988A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F7BFD6F1E30E3CC006F988A /* Main.storyboard */; };
@@ -101,6 +110,15 @@
 		5F189BEB1E340C72000142C9 /* gazo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gazo.png; sourceTree = "<group>"; };
 		5F189BEE1E3414D3000142C9 /* HelpCommunicationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpCommunicationController.swift; sourceTree = "<group>"; };
 		5F189BF11E34162C000142C9 /* hinanSiteiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hinanSiteiController.swift; sourceTree = "<group>"; };
+		5F189BF41E344F59000142C9 /* cominity_avtive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cominity_avtive.png; sourceTree = "<group>"; };
+		5F189BF61E344F5E000142C9 /* news_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news_active.png; sourceTree = "<group>"; };
+		5F189BF81E344F63000142C9 /* user_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_active.png; sourceTree = "<group>"; };
+		5F189BFA1E345056000142C9 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		5F189BFC1E345945000142C9 /* icon_user_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_user_active.png; sourceTree = "<group>"; };
+		5F189BFE1E34594E000142C9 /* icon_news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_news.png; sourceTree = "<group>"; };
+		5F189C001E345953000142C9 /* icon_cominity_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_cominity_active.png; sourceTree = "<group>"; };
+		5F189C021E345D6F000142C9 /* userself.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userself.png; sourceTree = "<group>"; };
+		5F189C051E345E5B000142C9 /* toukouController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = toukouController.swift; sourceTree = "<group>"; };
 		5F7BFD681E30E3CC006F988A /* disaster_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = disaster_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F7BFD6B1E30E3CC006F988A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F7BFD6D1E30E3CC006F988A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -297,6 +315,14 @@
 			isa = PBXGroup;
 			children = (
 				5F189BE31E33FC16000142C9 /* top.png */,
+				5F189BF61E344F5E000142C9 /* news_active.png */,
+				5F189C021E345D6F000142C9 /* userself.png */,
+				5F189BFA1E345056000142C9 /* bg.png */,
+				5F189BFC1E345945000142C9 /* icon_user_active.png */,
+				5F189C001E345953000142C9 /* icon_cominity_active.png */,
+				5F189BFE1E34594E000142C9 /* icon_news.png */,
+				5F189BF81E344F63000142C9 /* user_active.png */,
+				5F189BF41E344F59000142C9 /* cominity_avtive.png */,
 			);
 			name = resource;
 			sourceTree = "<group>";
@@ -321,6 +347,7 @@
 		5F189BED1E3414B7000142C9 /* communication */ = {
 			isa = PBXGroup;
 			children = (
+				5F189C041E345E46000142C9 /* toukou */,
 				5F189BEE1E3414D3000142C9 /* HelpCommunicationController.swift */,
 			);
 			name = communication;
@@ -332,6 +359,14 @@
 				5F189BF11E34162C000142C9 /* hinanSiteiController.swift */,
 			);
 			name = hinanSitei;
+			sourceTree = "<group>";
+		};
+		5F189C041E345E46000142C9 /* toukou */ = {
+			isa = PBXGroup;
+			children = (
+				5F189C051E345E5B000142C9 /* toukouController.swift */,
+			);
+			name = toukou;
 			sourceTree = "<group>";
 		};
 		5F7BFD5F1E30E3CC006F988A = {
@@ -576,13 +611,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F189BFD1E345945000142C9 /* icon_user_active.png in Resources */,
 				5F7BFD761E30E3CC006F988A /* LaunchScreen.storyboard in Resources */,
 				5F189BD41E3396EA000142C9 /* InfoCell.xib in Resources */,
+				5F189BFB1E345056000142C9 /* bg.png in Resources */,
+				5F189BF71E344F5E000142C9 /* news_active.png in Resources */,
+				5F189BF51E344F59000142C9 /* cominity_avtive.png in Resources */,
+				5F189C011E345953000142C9 /* icon_cominity_active.png in Resources */,
 				5F189BE11E33F3D6000142C9 /* tokyo.png in Resources */,
+				5F189BFF1E34594E000142C9 /* icon_news.png in Resources */,
 				5F189BE41E33FC16000142C9 /* top.png in Resources */,
 				5F189BEC1E340C72000142C9 /* gazo.png in Resources */,
 				5F7BFD731E30E3CC006F988A /* Assets.xcassets in Resources */,
 				5F7BFD711E30E3CC006F988A /* Main.storyboard in Resources */,
+				5F189BF91E344F63000142C9 /* user_active.png in Resources */,
+				5F189C031E345D6F000142C9 /* userself.png in Resources */,
 				5F189BDD1E33B70B000142C9 /* infoCell2.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -650,6 +693,7 @@
 				5F189BF21E34162C000142C9 /* hinanSiteiController.swift in Sources */,
 				5F189BEF1E3414D3000142C9 /* HelpCommunicationController.swift in Sources */,
 				5F189BE71E33FC32000142C9 /* topController.swift in Sources */,
+				5F189C061E345E5B000142C9 /* toukouController.swift in Sources */,
 				5F7BFD6E1E30E3CC006F988A /* ViewController.swift in Sources */,
 				5F189BCE1E338398000142C9 /* InfoController.swift in Sources */,
 				75C588F41E337820008C7DA0 /* RealmExtension.swift in Sources */,

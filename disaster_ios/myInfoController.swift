@@ -46,6 +46,7 @@ class MyInfoViewController: UIViewController {
         slabel.text = "自分の情報"
         slabel.textAlignment = .center
         slabel.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
+        slabel.textColor = UIColorFromRGB(0x2E343B)
         self.view.addSubview(slabel)
         //注釈
         tyusyaku = UIView(frame:CGRect(x:0,y:50,width:self.view.frame.size.width,height:90))
@@ -54,6 +55,7 @@ class MyInfoViewController: UIViewController {
         tyusyakuLabel.text = "自身の安否情報を登録しましょう"
         tyusyakuLabel.font = UIFont.systemFont(ofSize: CGFloat(15))
         tyusyakuLabel.backgroundColor = UIColorFromRGB(0xE6EAED)
+        tyusyakuLabel.textColor = UIColorFromRGB(0x2E343B)
         tyusyaku.addSubview(tyusyakuLabel)
         var tyusyakuText = UITextView(frame:CGRect(x:10,y:20,width:self.view.frame.size.width-10,height:60))
         tyusyakuText.text = "登録を行えば避難所ごとにオフラインでも使用できるチャットが使えるようになります。登録された情報は市町村などで被災地支援のために活用されます。"
@@ -111,9 +113,9 @@ class MyInfoViewController: UIViewController {
         byoukiView.layer.borderColor = UIColorFromRGB(0xe3e3e3).cgColor
         var byoukiLabel = UILabel(frame:CGRect(x:20,y:430,width:self.view.frame.size.width,height:50))
         byoukiLabel.text = "名前"
-        byoukiLabel.textColor = UIColorFromRGB(0xAAAAAA)
+        byoukiLabel.textColor = UIColorFromRGB(0x15AFEF)
         jibyo = UILabel(frame:CGRect(x:80,y:430,width:self.view.frame.size.width,height:50))
-        jibyo.textColor = UIColorFromRGB(0x14F3FF)
+        jibyo.textColor = UIColorFromRGB(0x15AFEF)
         self.view.addSubview(byoukiView)
         self.view.addSubview(byoukiLabel)
         self.view.addSubview(jibyo)
@@ -126,7 +128,7 @@ class MyInfoViewController: UIViewController {
         skillLabel.text = "持病"
         skillLabel.textColor = UIColorFromRGB(0xAAAAAA)
         skill = UILabel(frame:CGRect(x:80,y:480,width:self.view.frame.size.width,height:50))
-        skill.textColor = UIColorFromRGB(0x14F3FF)
+        skill.textColor = UIColorFromRGB(0x15AFEF)
         self.view.addSubview(skillView)
         self.view.addSubview(skillLabel)
         self.view.addSubview(skill)

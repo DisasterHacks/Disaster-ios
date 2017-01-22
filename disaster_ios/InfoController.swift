@@ -46,7 +46,6 @@ class PublicInfoController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func setHeader(){
         let header = UIImageView(frame:CGRect(x:0,y:0,width:self.view.frame.size.width,height:100))
-       // header.backgroundColor = UIColor.blue
         header.image = UIImage(named:"bg.png")
         
         

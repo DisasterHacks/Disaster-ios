@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODs-cf-B57">
-                        <rect key="frame" x="122" y="8" width="36" height="23.5"/>
+                        <rect key="frame" x="77" y="8" width="36" height="31"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -31,8 +31,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="W6H-bc-6cj">
-                        <rect key="frame" x="23" y="25" width="385" height="75"/>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="W6H-bc-6cj">
+                        <rect key="frame" x="-22" y="36" width="477" height="64"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -41,18 +41,22 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="W6H-bc-6cj" firstAttribute="leading" secondItem="ITd-aw-dWC" secondAttribute="trailing" constant="-53" id="4uI-ab-R5o"/>
-                    <constraint firstItem="W6H-bc-6cj" firstAttribute="centerX" secondItem="so0-AX-0Ha" secondAttribute="centerX" id="HZ4-Ej-VZv"/>
+                    <constraint firstItem="W6H-bc-6cj" firstAttribute="centerX" secondItem="so0-AX-0Ha" secondAttribute="centerX" constant="1.5" id="96Q-qD-n6a"/>
+                    <constraint firstItem="W6H-bc-6cj" firstAttribute="centerX" secondItem="so0-AX-0Ha" secondAttribute="centerX" constant="1.5" id="HZ4-Ej-VZv"/>
                     <constraint firstItem="ITd-aw-dWC" firstAttribute="leading" secondItem="so0-AX-0Ha" secondAttribute="leadingMargin" constant="23" id="IJA-QM-DSq"/>
-                    <constraint firstItem="W6H-bc-6cj" firstAttribute="centerX" secondItem="so0-AX-0Ha" secondAttribute="centerX" constant="0.5" id="Llf-OL-s1e"/>
-                    <constraint firstItem="ITd-aw-dWC" firstAttribute="centerY" secondItem="ODs-cf-B57" secondAttribute="centerY" id="OYO-I4-lxO"/>
+                    <constraint firstItem="W6H-bc-6cj" firstAttribute="centerX" secondItem="so0-AX-0Ha" secondAttribute="centerX" constant="1.5" id="Llf-OL-s1e"/>
+                    <constraint firstItem="ITd-aw-dWC" firstAttribute="centerY" secondItem="ODs-cf-B57" secondAttribute="centerY" constant="-3.25" id="OYO-I4-lxO"/>
+                    <constraint firstItem="W6H-bc-6cj" firstAttribute="centerY" secondItem="so0-AX-0Ha" secondAttribute="centerY" constant="13.75" id="aMG-3B-K6g"/>
                     <constraint firstItem="ODs-cf-B57" firstAttribute="top" secondItem="so0-AX-0Ha" secondAttribute="topMargin" id="aQ5-Ke-evz"/>
                     <constraint firstItem="W6H-bc-6cj" firstAttribute="bottom" secondItem="so0-AX-0Ha" secondAttribute="bottomMargin" id="dMU-22-XTa"/>
+                    <constraint firstItem="W6H-bc-6cj" firstAttribute="centerY" secondItem="so0-AX-0Ha" secondAttribute="centerY" constant="13.75" id="gEz-qm-N43"/>
                     <constraint firstItem="ODs-cf-B57" firstAttribute="leading" secondItem="ITd-aw-dWC" secondAttribute="trailing" constant="46" id="imV-ST-TPw"/>
                     <constraint firstItem="ITd-aw-dWC" firstAttribute="top" secondItem="so0-AX-0Ha" secondAttribute="top" constant="10" id="jaZ-8T-EFV"/>
-                    <constraint firstItem="W6H-bc-6cj" firstAttribute="centerY" secondItem="so0-AX-0Ha" secondAttribute="centerY" constant="9" id="lbv-FJ-klT"/>
-                    <constraint firstItem="W6H-bc-6cj" firstAttribute="centerY" secondItem="so0-AX-0Ha" secondAttribute="centerY" constant="9" id="rZk-qi-Hu0"/>
-                    <constraint firstItem="W6H-bc-6cj" firstAttribute="centerX" secondItem="so0-AX-0Ha" secondAttribute="centerX" id="uEl-tq-lFa"/>
-                    <constraint firstItem="W6H-bc-6cj" firstAttribute="centerY" secondItem="so0-AX-0Ha" secondAttribute="centerY" constant="8.25" id="v2s-KQ-vH4"/>
+                    <constraint firstItem="W6H-bc-6cj" firstAttribute="centerX" secondItem="so0-AX-0Ha" secondAttribute="centerX" constant="1.5" id="kCI-pa-1Wz"/>
+                    <constraint firstItem="W6H-bc-6cj" firstAttribute="centerY" secondItem="so0-AX-0Ha" secondAttribute="centerY" constant="13.75" id="lbv-FJ-klT"/>
+                    <constraint firstItem="W6H-bc-6cj" firstAttribute="centerY" secondItem="so0-AX-0Ha" secondAttribute="centerY" constant="13.75" id="rZk-qi-Hu0"/>
+                    <constraint firstItem="W6H-bc-6cj" firstAttribute="centerX" secondItem="so0-AX-0Ha" secondAttribute="centerX" constant="1.5" id="uEl-tq-lFa"/>
+                    <constraint firstItem="W6H-bc-6cj" firstAttribute="centerY" secondItem="so0-AX-0Ha" secondAttribute="centerY" constant="13.75" id="v2s-KQ-vH4"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

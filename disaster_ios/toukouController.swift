@@ -25,13 +25,13 @@ class toukouController: UIViewController,UITextFieldDelegate {
     }
     
     func setTop(){
-        var cancelButton = UIButton(frame:CGRect(x:20,y:30,width:100,height:40))
+        let cancelButton = UIButton(frame:CGRect(x:20,y:30,width:100,height:40))
         cancelButton.setTitle("キャンセル", for: .normal)
         cancelButton.setTitleColor(UIColorFromRGB(0x15AFEF), for:.normal)
         cancelButton.addTarget(self, action: "close", for: .touchUpInside)
         self.view.addSubview(cancelButton)
         
-        var toukouButton = UIButton(frame:CGRect(x:self.view.frame.size.width-100,y:30,width:100,height:40))
+        let toukouButton = UIButton(frame:CGRect(x:self.view.frame.size.width-100,y:30,width:100,height:40))
         //toukouButton.
         //toukouButton.backgroundColor = UIColor.blue
         toukouButton.setTitle("投稿", for: .normal)
@@ -56,7 +56,7 @@ class toukouController: UIViewController,UITextFieldDelegate {
         topLabel.font = UIFont.systemFont(ofSize: 17.0)*/
 
         
-        touko = UITextField(frame:CGRect(x:80,y:200,width:self.view.frame.size.width,height:50))
+        touko = UITextField(frame:CGRect(x:10,y:200,width:self.view.frame.size.width - 20,height:100))
         touko.textColor = UIColorFromRGB(0x14F3FF)
         touko.placeholder = "ここに入力してください"
         touko.delegate = self
@@ -69,16 +69,19 @@ class toukouController: UIViewController,UITextFieldDelegate {
     
     func setMidasi(){
         //注釈
-         tyusyaku = UIView(frame:CGRect(x:0,y:90,width:self.view.frame.size.width,height:90))
+         tyusyaku = UIView(frame:CGRect(x:0,y:90,width:self.view.frame.size.width,height:100))
         tyusyaku.backgroundColor = UIColorFromRGB(0xE6EAED)
-        var tyusyakuLabel = UILabel(frame:CGRect(x:10,y:5,width:self.view.frame.size.width,height:10))
+        let tyusyakuLabel = UILabel(frame:CGRect(x:10,y:10,width:self.view.frame.size.width,height:20))
         tyusyakuLabel.text = "自身の安否情報を登録しましょう"
-        tyusyakuLabel.font = UIFont.systemFont(ofSize: CGFloat(15))
+        tyusyakuLabel.font = UIFont(name: "HiraginoSans-W6", size: 17)
         tyusyakuLabel.backgroundColor = UIColorFromRGB(0xE6EAED)
-        tyusyakuLabel.textColor = UIColorFromRGB(0x2E343B)
+        tyusyakuLabel.textColor = UIColorFromRGB(0xAAAAAA)
+        //tyusyakuLabel.textColor = UIColorFromRGB(0x2E343B)
         tyusyaku.addSubview(tyusyakuLabel)
-        var tyusyakuText = UITextView(frame:CGRect(x:10,y:20,width:self.view.frame.size.width-10,height:60))
+        let tyusyakuText = UITextView(frame:CGRect(x:10,y:30,width:self.view.frame.size.width-10,height:60))
         tyusyakuText.text = "避難所コミュニティに書き込むと同じ避難所のユーザーが投稿を見ることができます。また、避難所の誰かがオンラインになった時に行政に投稿が表示されます。"
+        tyusyakuText.font = UIFont(name: "HiraginoSans-W3", size: 12)
+        tyusyakuText.textColor = UIColorFromRGB(0xAAAAAA)
         tyusyakuText.isUserInteractionEnabled = false
         tyusyakuText.backgroundColor = UIColorFromRGB(0xE6EAED)
         self.tyusyaku.addSubview(tyusyakuText)

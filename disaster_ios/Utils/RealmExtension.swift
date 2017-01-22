@@ -19,7 +19,7 @@ extension Realm {
     class func addObject<T: Object>(_ model: T) {
         let realm = try! Realm()
         try! realm.write({
-            realm.add(model, update: true)
+            realm.add(model)
         })
     }
     

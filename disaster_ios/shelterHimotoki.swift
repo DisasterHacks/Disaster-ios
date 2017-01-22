@@ -10,7 +10,7 @@ import Foundation
 import Himotoki
 
 
-struct ShelterDatas : Decodable{
+struct ShelterDatas : Decodable {
     let list:[Shelter]
     
     static func decode(_ e: Extractor) throws -> ShelterDatas {

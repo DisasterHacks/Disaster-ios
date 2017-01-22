@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import APIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = topController()//PublicInfoController()
+        
+        if let _ = SyncEngine.shared.shelterAll().first {
+            return true
+        }
+        
+        let request = ShelterAPI.ShelterEnum.all()
+        Session.send(request) {
+            switch $0 {
+            case .success(let shelters):
+                shelters.list.forEach {
+                    let shelter  = ShelterRealmModel()
+                    shelter.id   = UUID.init().uuidString
+                    shelter.name = $0.name
+                    SyncEngine.shared.add(shelter) { }
+                }
+                
+                SyncEngine.shared.shelterAll().forEach {
+                    print($0)
+                }
+            case .failure(let error): print(error)
+            }
+        }
+        
         return true
     }
 

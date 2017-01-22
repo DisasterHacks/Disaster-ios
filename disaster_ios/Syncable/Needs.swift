@@ -16,7 +16,8 @@ class Needs: NSObject, Syncable {
     var text: String    = ""
     var timestamp: Date = Date()
     
-    init(text: String) {
+    init(id: String, text: String) {
+        self.id   = id
         self.text = text
         super.init()
     }

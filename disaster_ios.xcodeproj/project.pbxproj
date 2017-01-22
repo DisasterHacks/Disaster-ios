@@ -20,7 +20,6 @@
 		5F189BCC1E33670A000142C9 /* shelterHimotoki.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F189BCB1E33670A000142C9 /* shelterHimotoki.swift */; };
 		5F189BCE1E338398000142C9 /* InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F189BCD1E338398000142C9 /* InfoController.swift */; };
 		5F189BD21E339147000142C9 /* InfoClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F189BD11E339147000142C9 /* InfoClass.swift */; };
-		5F189BD41E3396EA000142C9 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F189BD31E3396EA000142C9 /* InfoCell.xib */; };
 		5F189BD61E3396F7000142C9 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F189BD51E3396F7000142C9 /* InfoCell.swift */; };
 		5F189BD91E339981000142C9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F189BD81E339981000142C9 /* Extensions.swift */; };
 		5F189BDD1E33B70B000142C9 /* infoCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F189BDC1E33B70B000142C9 /* infoCell2.xib */; };
@@ -41,6 +40,8 @@
 		5F189C011E345953000142C9 /* icon_cominity_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F189C001E345953000142C9 /* icon_cominity_active.png */; };
 		5F189C031E345D6F000142C9 /* userself.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F189C021E345D6F000142C9 /* userself.png */; };
 		5F189C061E345E5B000142C9 /* toukouController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F189C051E345E5B000142C9 /* toukouController.swift */; };
+		5F189C081E347049000142C9 /* infoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F189C071E347049000142C9 /* infoCell.xib */; };
+		5F189C0A1E34729F000142C9 /* userInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F189C091E34729F000142C9 /* userInfo.swift */; };
 		5F7BFD6C1E30E3CC006F988A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BFD6B1E30E3CC006F988A /* AppDelegate.swift */; };
 		5F7BFD6E1E30E3CC006F988A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BFD6D1E30E3CC006F988A /* ViewController.swift */; };
 		5F7BFD711E30E3CC006F988A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F7BFD6F1E30E3CC006F988A /* Main.storyboard */; };
@@ -99,7 +100,6 @@
 		5F189BCB1E33670A000142C9 /* shelterHimotoki.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shelterHimotoki.swift; sourceTree = "<group>"; };
 		5F189BCD1E338398000142C9 /* InfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoController.swift; sourceTree = "<group>"; };
 		5F189BD11E339147000142C9 /* InfoClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoClass.swift; sourceTree = "<group>"; };
-		5F189BD31E3396EA000142C9 /* InfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
 		5F189BD51E3396F7000142C9 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		5F189BD81E339981000142C9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5F189BDC1E33B70B000142C9 /* infoCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = infoCell2.xib; sourceTree = "<group>"; };
@@ -120,6 +120,8 @@
 		5F189C001E345953000142C9 /* icon_cominity_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_cominity_active.png; sourceTree = "<group>"; };
 		5F189C021E345D6F000142C9 /* userself.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userself.png; sourceTree = "<group>"; };
 		5F189C051E345E5B000142C9 /* toukouController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = toukouController.swift; sourceTree = "<group>"; };
+		5F189C071E347049000142C9 /* infoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = infoCell.xib; sourceTree = "<group>"; };
+		5F189C091E34729F000142C9 /* userInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userInfo.swift; sourceTree = "<group>"; };
 		5F7BFD681E30E3CC006F988A /* disaster_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = disaster_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F7BFD6B1E30E3CC006F988A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F7BFD6D1E30E3CC006F988A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -297,10 +299,10 @@
 				5F189BE01E33F3D6000142C9 /* tokyo.png */,
 				5F189BCD1E338398000142C9 /* InfoController.swift */,
 				5F189BD11E339147000142C9 /* InfoClass.swift */,
-				5F189BD31E3396EA000142C9 /* InfoCell.xib */,
 				5F189BD51E3396F7000142C9 /* InfoCell.swift */,
 				5F189BDC1E33B70B000142C9 /* infoCell2.xib */,
 				5F189BDE1E33B7F3000142C9 /* infoCell2.swift */,
+				5F189C071E347049000142C9 /* infoCell.xib */,
 			);
 			name = publicInfo;
 			sourceTree = "<group>";
@@ -352,6 +354,7 @@
 			children = (
 				5F189C041E345E46000142C9 /* toukou */,
 				5F189BEE1E3414D3000142C9 /* HelpCommunicationController.swift */,
+				5F189C091E34729F000142C9 /* userInfo.swift */,
 			);
 			name = communication;
 			sourceTree = "<group>";
@@ -616,7 +619,6 @@
 			files = (
 				5F189BFD1E345945000142C9 /* icon_user_active.png in Resources */,
 				5F7BFD761E30E3CC006F988A /* LaunchScreen.storyboard in Resources */,
-				5F189BD41E3396EA000142C9 /* InfoCell.xib in Resources */,
 				5F189BFB1E345056000142C9 /* bg.png in Resources */,
 				5F189BF71E344F5E000142C9 /* news_active.png in Resources */,
 				5F189BF51E344F59000142C9 /* cominity_avtive.png in Resources */,
@@ -625,6 +627,7 @@
 				5F189BFF1E34594E000142C9 /* icon_news.png in Resources */,
 				5F189BE41E33FC16000142C9 /* top.png in Resources */,
 				5F189BEC1E340C72000142C9 /* gazo.png in Resources */,
+				5F189C081E347049000142C9 /* infoCell.xib in Resources */,
 				5F7BFD731E30E3CC006F988A /* Assets.xcassets in Resources */,
 				5F7BFD711E30E3CC006F988A /* Main.storyboard in Resources */,
 				5F189BF91E344F63000142C9 /* user_active.png in Resources */,
@@ -690,6 +693,7 @@
 				75C588F11E337660008C7DA0 /* SyncEngine.swift in Sources */,
 				5F189BD61E3396F7000142C9 /* InfoCell.swift in Sources */,
 				75C588E81E33753D008C7DA0 /* RealmModelable.swift in Sources */,
+				5F189C0A1E34729F000142C9 /* userInfo.swift in Sources */,
 				5F189BC71E336075000142C9 /* TwitterHimotoki.swift in Sources */,
 				5F189BB31E312217000142C9 /* APIKitSampleController.swift in Sources */,
 				75C588EB1E3375B7008C7DA0 /* NewsRealmModel.swift in Sources */,

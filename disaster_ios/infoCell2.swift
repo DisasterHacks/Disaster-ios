@@ -23,6 +23,7 @@ class infoCell2:UITableViewCell{
     }
     
     func setCell(_ infoSet:InfoClass){
+        self.textViewLabel.isUserInteractionEnabled = true
         nameLabel.text = infoSet.name
         textViewLabel.text = infoSet.text
         dateLabel.text = infoSet.date

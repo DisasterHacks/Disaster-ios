@@ -20,6 +20,8 @@ class hinanSiteiController: UIViewController, UISearchBarDelegate  {
     var sisetuName : UILabel!
     var adName:UILabel!
     
+    var registerButton:UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
@@ -76,7 +78,22 @@ class hinanSiteiController: UIViewController, UISearchBarDelegate  {
         self.view.addSubview(adView)
         self.view.addSubview(adLabel)
         self.view.addSubview(adName)
+        
+        //登録ボタン
+        registerButton = UIButton(frame:CGRect(x:self.view.frame.size.width/2-30,y:270,width:60,height:20))
+        //registerButton.setImage(UIImage(named:"top.png"), for: .touchUpInside)
+        registerButton.addTarget(self, action: "register", for: .touchUpInside)
+        self.view.addSubview(registerButton)
+        
+        
 
+    }
+    
+    func register(){
+        //realmで自分の避難場所を登録する
+        
+        
+            
     }
 
     

@@ -73,6 +73,7 @@ class PublicInfoController: UIViewController, UITableViewDelegate, UITableViewDa
                     self.infoList[ind] = InfoClass(name:info.name,text:i)
                     ind = ind + 1
                 }
+                
                 DispatchQueue.main.async { [unowned self] in
                     self.infoTableView.reloadData()
                 }

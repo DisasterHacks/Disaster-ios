@@ -40,7 +40,7 @@ class SyncEngine {
     typealias Handler = () -> Void
     
     func add(_ object: NewsRealmModel, handler: @escaping Handler) {
-        guard let news = self.newsAll().filter("id=%@", object.id).first else {
+        guard let news = self.newsAll().filter("text=%@", object.text).first else {
             // 重複無し
             Realm.addObject(object)
             return

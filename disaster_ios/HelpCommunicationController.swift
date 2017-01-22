@@ -32,7 +32,7 @@ class HelpCommunicationController: UIViewController,UITableViewDelegate,UITableV
         self.infoTableView.register(nib, forCellReuseIdentifier: "infoCell")
         self.view.addSubview(infoTableView)
         
-        var infoSet = [1:UserInfo(1,"山本 幸治","家族３人で避難しています。乳児がいますがミルクがないので至急ミルクが必要です。自宅も倒壊してしまったので哺乳瓶も手元にありません。"),2:UserInfo(2,"武田 佳子","")]
+        var infoSet = [1:UserInfo(id: "1",name: "山本 幸治",text: "家族３人で避難しています。乳児がいますがミルクがないので至急ミルクが必要です。自宅も倒壊してしまったので哺乳瓶も手元にありません。"),2:UserInfo(id:"2",name:"武田 佳子",text:"インシュリンが必要なので、届けて欲しいです。同じ避難所か周囲の避難所の方にもお願いしたいです。"),3:UserInfo(id:"3",name:"鈴木 太郎",text:"米・小麦粉アレルギーなのでこの避難所にある備蓄食料で食べられません。アレルギー対応食をお願いします。"),4:UserInfo(id:"4",name:"岡本次郎",text:"ok")]
         /*let request = TwitterAPI.TwitterEnum.all()
         Session.send(request) { result in
             switch result {

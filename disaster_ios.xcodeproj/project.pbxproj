@@ -31,6 +31,7 @@
 		5F189BEA1E33FEFE000142C9 /* myInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F189BE91E33FEFE000142C9 /* myInfoController.swift */; };
 		5F189BEC1E340C72000142C9 /* gazo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F189BEB1E340C72000142C9 /* gazo.png */; };
 		5F189BEF1E3414D3000142C9 /* HelpCommunicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F189BEE1E3414D3000142C9 /* HelpCommunicationController.swift */; };
+		5F189BF21E34162C000142C9 /* hinanSiteiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F189BF11E34162C000142C9 /* hinanSiteiController.swift */; };
 		5F7BFD6C1E30E3CC006F988A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BFD6B1E30E3CC006F988A /* AppDelegate.swift */; };
 		5F7BFD6E1E30E3CC006F988A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BFD6D1E30E3CC006F988A /* ViewController.swift */; };
 		5F7BFD711E30E3CC006F988A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F7BFD6F1E30E3CC006F988A /* Main.storyboard */; };
@@ -99,6 +100,7 @@
 		5F189BE91E33FEFE000142C9 /* myInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myInfoController.swift; sourceTree = "<group>"; };
 		5F189BEB1E340C72000142C9 /* gazo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gazo.png; sourceTree = "<group>"; };
 		5F189BEE1E3414D3000142C9 /* HelpCommunicationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpCommunicationController.swift; sourceTree = "<group>"; };
+		5F189BF11E34162C000142C9 /* hinanSiteiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hinanSiteiController.swift; sourceTree = "<group>"; };
 		5F7BFD681E30E3CC006F988A /* disaster_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = disaster_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F7BFD6B1E30E3CC006F988A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F7BFD6D1E30E3CC006F988A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 		5F189BCF1E33911E000142C9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5F189BF01E34161C000142C9 /* hinanSitei */,
 				5F189BED1E3414B7000142C9 /* communication */,
 				5F189BE81E33FEDC000142C9 /* myInfo */,
 				5F189BE51E33FC23000142C9 /* top */,
@@ -321,6 +324,14 @@
 				5F189BEE1E3414D3000142C9 /* HelpCommunicationController.swift */,
 			);
 			name = communication;
+			sourceTree = "<group>";
+		};
+		5F189BF01E34161C000142C9 /* hinanSitei */ = {
+			isa = PBXGroup;
+			children = (
+				5F189BF11E34162C000142C9 /* hinanSiteiController.swift */,
+			);
+			name = hinanSitei;
 			sourceTree = "<group>";
 		};
 		5F7BFD5F1E30E3CC006F988A = {
@@ -636,6 +647,7 @@
 				5F189BB31E312217000142C9 /* APIKitSampleController.swift in Sources */,
 				75C588EB1E3375B7008C7DA0 /* NewsRealmModel.swift in Sources */,
 				75C588ED1E3375CE008C7DA0 /* NeedsRealmModel.swift in Sources */,
+				5F189BF21E34162C000142C9 /* hinanSiteiController.swift in Sources */,
 				5F189BEF1E3414D3000142C9 /* HelpCommunicationController.swift in Sources */,
 				5F189BE71E33FC32000142C9 /* topController.swift in Sources */,
 				5F7BFD6E1E30E3CC006F988A /* ViewController.swift in Sources */,

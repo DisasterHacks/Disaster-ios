@@ -37,19 +37,21 @@ class PublicInfoController: UIViewController, UITableViewDelegate, UITableViewDa
         let header = UIView(frame:CGRect(x:0,y:0,width:self.view.frame.size.width,height:100))
         header.backgroundColor = UIColor.blue
         
-        let headerTitle = UILabel(frame:CGRect(x:90,y:50,width:120,height:20))
+        let headerTitle = UILabel(frame:CGRect(x:90,y:40,width:120,height:20))
         headerTitle.text = "東京都防災"
-        headerTitle.font = UIFont.systemFont(ofSize: CGFloat(17))
+        headerTitle.font = UIFont(name: "HiraginoSans-W6", size: 18)
         headerTitle.textColor = UIColor.white
-        let account = UILabel(frame:CGRect(x:220,y:50,width:100,height:20))
+        let account = UILabel(frame:CGRect(x:190,y:40,width:100,height:20))
         account.textColor = UIColor.white
-        account.text = "@tokyo_bousai"
-        account.font = UIFont.systemFont(ofSize: CGFloat(14))
+        account.text  = "@tokyo_bousai"
+        account.font  = UIFont.systemFont(ofSize: CGFloat(14))
+        account.alpha = 0.7
         let underMidasi = UILabel(frame:CGRect(x:0,y:70,width:self.view.frame.size.width,height:30))
         underMidasi.backgroundColor = UIColor.white
         underMidasi.textAlignment = .center
         underMidasi.text = "最終同期 online 17:36 offline 17:29"
-        underMidasi.font = UIFont.systemFont(ofSize: CGFloat(14))
+        underMidasi.font = UIFont.systemFont(ofSize: CGFloat(12))
+        underMidasi.textColor = UIColorFromRGB(0x93979C)
    
         
         let icon = UIImage(named:"tokyo.png")
@@ -59,7 +61,6 @@ class PublicInfoController: UIViewController, UITableViewDelegate, UITableViewDa
         self.view.addSubview(underMidasi)
         self.view.addSubview(headerTitle)
         self.view.addSubview(account)
-        
 
         self.view.addSubview(iconView)
     }

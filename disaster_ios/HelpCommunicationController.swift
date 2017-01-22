@@ -40,9 +40,18 @@ class HelpCommunicationController: UIViewController,UITableViewDelegate,UITableV
         var titleLabel = UILabel(frame:CGRect(x:self.view.frame.size.width/6,y:10,width:self.view.frame.size.width*2/3,height:40))
         titleLabel.text = "紀尾井町ガーデンテラス　緊急避難所"
         titleLabel.textColor = UIColor.white
-        var toukou = UIButton(frame:CGRect(x:self.view.frame.size.width-50,y:10,width:40,height:50))
-        toukou.setImage(UIImage(named:"community_pen.png"), for:.normal)
+        
+        var  titleWhite = UILabel(frame:CGRect(x:0,y:50,width:self.view.frame.size.width,
+                                               height:50))
+        titleWhite.text = "連絡、困っていることなどを投稿"
+        titleWhite.textColor = UIColorFromRGB(0xdddddd)
+        titleWhite.backgroundColor = UIColor.white
+        self.view.addSubview(titleWhite)
+        
+        var toukou = UIButton(frame:CGRect(x:self.view.frame.size.width-50,y:50,width:40,height:50))
+        toukou.setImage(UIImage(named:"cominity__pen.png"), for:.normal)
         toukou.addTarget(self, action: "toukouView", for: .touchUpInside)
+        
         self.view.addSubview(toukou)
 
     }

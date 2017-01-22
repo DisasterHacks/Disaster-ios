@@ -34,13 +34,17 @@ class PublicInfoController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func setHeader(){
-        let header = UIView(frame:CGRect(x:0,y:0,width:self.view.frame.size.width,height:100))
-        header.backgroundColor = UIColor.blue
+        let header = UIImageView(frame:CGRect(x:0,y:0,width:self.view.frame.size.width,height:100))
+       // header.backgroundColor = UIColor.blue
+        header.image = UIImage(named:"bg.png")
+        
         
         let headerTitle = UILabel(frame:CGRect(x:90,y:40,width:120,height:20))
         headerTitle.text = "東京都防災"
         headerTitle.font = UIFont(name: "HiraginoSans-W6", size: 18)
         headerTitle.textColor = UIColor.white
+
+        
         let account = UILabel(frame:CGRect(x:190,y:40,width:100,height:20))
         account.textColor = UIColor.white
         account.text  = "@tokyo_bousai"

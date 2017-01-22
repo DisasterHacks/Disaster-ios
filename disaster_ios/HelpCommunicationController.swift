@@ -8,29 +8,32 @@
 
 import Foundation
 import UIKit
+import APIKit
 
-class HelpCommunicationController: UIViewController {
+class HelpCommunicationController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     var infoList:[Int:InfoClass] = [:]
     var infoTableView: UITableView!
     
     var header:UIView!
     var iconView:UIImageView!
-
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-   /* func setTableView(){
+    func setTableView(){
         infoTableView = UITableView(frame:CGRect(x:0,y:100,width:self.view.frame.size.height,height:self.view.frame.size.height-150))
         infoTableView.delegate = self
         infoTableView.dataSource = self
-        let nib = UINib(nibName: "infoCell2", bundle: nil)
-        self.infoTableView.register(nib, forCellReuseIdentifier: "infoCell2")
+        let nib = UINib(nibName: "infoCell", bundle: nil)
+        self.infoTableView.register(nib, forCellReuseIdentifier: "infoCell")
+        self.view.addSubview(infoTableView)
         
-        let request = TwitterAPI.TwitterEnum.all()
+        var infoSet = [1:UserInfo(1,"山本 幸治","家族３人で避難しています。乳児がいますがミルクがないので至急ミルクが必要です。自宅も倒壊してしまったので哺乳瓶も手元にありません。"),2:UserInfo(2,"武田 佳子","")]
+        /*let request = TwitterAPI.TwitterEnum.all()
         Session.send(request) { result in
             switch result {
             case .success(let info):
@@ -47,8 +50,8 @@ class HelpCommunicationController: UIViewController {
             case .failure(let error): print(error)
             }
         }*/
-
-    
+        
+    }
 }
 
 
@@ -77,7 +80,7 @@ extension HelpCommunicationController{
      */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 再利用するCellを取得する.
-        let cell = tableView.dequeueReusableCell(withIdentifier: "infoCell2", for: indexPath) as! infoCell2
+        let cell = tableView.dequeueReusableCell(withIdentifier: "infoCell", for: indexPath) as! infoCell
         // Cellに値を設定する.
         print("せる登録でき得る")
         cell.setCell(infoList[indexPath.row]!)

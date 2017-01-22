@@ -59,6 +59,7 @@ class topController: UIViewController {
         let secondVC = MyInfoViewController()
         var thirdI = UIImage(named:"icon_user_active.png")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
         var rs1 = resizeImage(image: thirdI!, newWidth: CGFloat(30.0))
+        
         secondVC.tabBarItem = UITabBarItem(title: "自分の情報", image: rs1, tag: 3)
         viewControllers.append(secondVC)
        
@@ -112,10 +113,10 @@ extension topController: MeshEngineDelegate {
         let scale = newWidth / image.size.width
         let newHeight = image.size.height * scale
         
-        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+        UIGraphicsBeginImageContext(CGSize(width: image.size.width/2, height: image.size.height/2))
         
         
-        image.draw(in: CGRect(x: 0, y: 0,width: newWidth, height: newHeight))
+        image.draw(in: CGRect(x: 0, y: 0,width: image.size.width/2,height: image.size.height/2))
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         

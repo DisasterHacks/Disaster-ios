@@ -14,8 +14,8 @@ import Himotoki
 class PublicInfoController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // Tableで使用する配列を設定する
-     var infoList:[Int:InfoClass] = [:]
-     var infoTableView: UITableView!
+    var infoList:[Int:InfoClass] = [:]
+    var infoTableView: UITableView!
     
     var header:UIView!
     var iconView:UIImageView!
@@ -84,9 +84,23 @@ class PublicInfoController: UIViewController, UITableViewDelegate, UITableViewDa
             switch result {
                 case .success(let info):
                 var ind = 0
-                for i in info.list{
+                for i in info.list {
                     self.infoList[ind] = InfoClass(name:info.name,text:i)
                     ind = ind + 1
+                }
+                
+                // Twitter の情報をローカルデータと同期する
+                self.infoList.map { object -> NewsRealmModel in
+                    let news = News(id: UUID.init().uuidString, text: object.value.text)
+                    return NewsRealmModel(news: news)
+                }.forEach {
+                    SyncEngine.shared.add($0) { }
+                }
+                
+                var i = 0
+                for news in SyncEngine.shared.newsAll() {
+                    self.infoList[ind] = InfoClass(name:UUID.init().uuidString,text: news.text)
+                    i = i + 1
                 }
                 
                 DispatchQueue.main.async { [weak self] in

@@ -7,7 +7,26 @@
 //
 
 import Foundation
+import RealmSwift
+import Realm
 
 class ShelterRealmModel: RealmModel {
-    dynamic var name = ""
+    dynamic var name      = ""
+    
+    init(shelter: Shelter) {
+        self.name      = shelter.name
+        super.init(id: shelter.id)
+    }
+    
+    required init(realm: RLMRealm, schema: RLMObjectSchema) {
+        super.init(realm: realm, schema: schema)
+    }
+    
+    required init(value: Any, schema: RLMSchema) {
+        super.init(value: value, schema: schema)
+    }
+    
+    required init() {
+        super.init()
+    }
 }

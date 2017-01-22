@@ -102,7 +102,7 @@ class hinanSiteiController: UIViewController, UISearchBarDelegate,UITextFieldDel
         registerButton.setTitle("登録", for: .normal)
         //registerButton.setImage(UIImage(named:"top.png"), for: .touchUpInside)
         registerButton.addTarget(self, action: "register", for: .touchUpInside)
-        registerButton.backgroundColor = UIColorFromRGB(0x000000)
+        registerButton.setImage(UIImage(named:"userself.png"),for:.normal)
         self.view.addSubview(registerButton)
         
         

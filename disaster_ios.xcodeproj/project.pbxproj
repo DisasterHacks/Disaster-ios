@@ -65,6 +65,7 @@
 		75C588F11E337660008C7DA0 /* SyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C588F01E337660008C7DA0 /* SyncEngine.swift */; };
 		75C588F41E337820008C7DA0 /* RealmExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C588F31E337820008C7DA0 /* RealmExtension.swift */; };
 		75C588F61E339573008C7DA0 /* ShelterRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C588F51E339573008C7DA0 /* ShelterRealmModel.swift */; };
+		75C588F81E346828008C7DA0 /* cominity__user.png in Resources */ = {isa = PBXBuildFile; fileRef = 75C588F71E346828008C7DA0 /* cominity__user.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +150,7 @@
 		75C588F01E337660008C7DA0 /* SyncEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SyncEngine.swift; path = SyncEngine/SyncEngine.swift; sourceTree = "<group>"; };
 		75C588F31E337820008C7DA0 /* RealmExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmExtension.swift; path = Utils/RealmExtension.swift; sourceTree = "<group>"; };
 		75C588F51E339573008C7DA0 /* ShelterRealmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShelterRealmModel.swift; path = Models/RealmModels/ShelterRealmModel.swift; sourceTree = "<group>"; };
+		75C588F71E346828008C7DA0 /* cominity__user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cominity__user.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,6 +316,7 @@
 		5F189BE21E33FC08000142C9 /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				75C588F71E346828008C7DA0 /* cominity__user.png */,
 				5F189BE31E33FC16000142C9 /* top.png */,
 				5F189BF61E344F5E000142C9 /* news_active.png */,
 				5F189C021E345D6F000142C9 /* userself.png */,
@@ -625,6 +628,7 @@
 				5F7BFD731E30E3CC006F988A /* Assets.xcassets in Resources */,
 				5F7BFD711E30E3CC006F988A /* Main.storyboard in Resources */,
 				5F189BF91E344F63000142C9 /* user_active.png in Resources */,
+				75C588F81E346828008C7DA0 /* cominity__user.png in Resources */,
 				5F189C031E345D6F000142C9 /* userself.png in Resources */,
 				5F189BDD1E33B70B000142C9 /* infoCell2.xib in Resources */,
 			);

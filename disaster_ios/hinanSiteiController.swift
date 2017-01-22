@@ -148,7 +148,7 @@ extension hinanSiteiController{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        SyncEngine.shared.u
+        //SyncEngine.shared.u
 
     }
     

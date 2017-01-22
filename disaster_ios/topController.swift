@@ -12,7 +12,7 @@ import UIKit
 class topController: UIViewController {
     
     var imageView:UIImageView!
-    
+    let meshManager = MeshEngine.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +26,10 @@ class topController: UIViewController {
         nextButton.backgroundColor = UIColor.white
         nextButton.corner
         nextButton.addTarget(self, action: "seni", for: .touchUpInside)*/
+        
+        self.meshManager.delegate = self
+        self.meshManager.id = UUID.init().uuidString
+        self.meshManager.joinMeshNetwork()
     }
     
     func seni(){
@@ -56,4 +60,58 @@ class topController: UIViewController {
         self.seni()
     }
     
+}
+
+extension topController: MeshEngineDelegate {
+    
+    func didReceived(syncable: Syncable) {
+        switch SyncType.init(syncable: syncable) {
+        case .news(let news):   SyncEngine.shared.add(NewsRealmModel(news:   news))  {}
+        case .needs(let needs): SyncEngine.shared.add(NeedsRealmModel(needs: needs)) {}
+        case .user(let user):   SyncEngine.shared.add(UserRealmModel(user:   user))  {}
+        case .none(): break
+        }
+    }
+    
+    func didConnected(id: String) {
+        SyncEngine.shared.newsAll().forEach {
+            let news = News(id: $0.id, text: $0.text)
+            self.meshManager.send(syncable: news)
+        }
+        
+        SyncEngine.shared.needsAll().forEach {
+            let needs = Needs(id: $0.id, text: $0.text)
+            self.meshManager.send(syncable: needs)
+        }
+        
+        SyncEngine.shared.userAll().forEach {
+            let user = User(id: $0.id, name: $0.name)
+            self.meshManager.send(syncable: user)
+        }
+    }
+}
+
+enum SyncType {
+    case news(News)
+    case needs(Needs)
+    case user(User)
+    case none()
+    init(syncable: Syncable) {
+        if syncable is News {
+            self = .news(syncable as! News)
+            return
+        }
+        
+        if syncable is Needs {
+            self = .needs(syncable as! Needs)
+            return
+        }
+        
+        if syncable is User {
+            self = .user(syncable as! User)
+            return
+        }
+        
+        self = .none()
+    }
 }

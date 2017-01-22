@@ -39,10 +39,16 @@ class topController: UIViewController {
         firstVC.tabBarItem = UITabBarItem(title:"災害ニュース",image:nil, tag: 1)
         viewControllers.append(firstVC)
         
-        // 2ページ目になるViewController
+        //2ページ目
+        let community = hinanSiteiController()
+        community.tabBarItem =  UITabBarItem(title: "避難所コミュニティ", image: nil, tag: 2)
+
+        
+        //3ページ目になるViewController
         let secondVC = MyInfoViewController()
-        secondVC.tabBarItem = UITabBarItem(title: "自分の情報", image: nil, tag: 2)
+        secondVC.tabBarItem = UITabBarItem(title: "自分の情報", image: nil, tag: 3)
         viewControllers.append(secondVC)
+       
         
         
         

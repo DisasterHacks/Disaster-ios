@@ -26,6 +26,11 @@ class PublicInfoController: UIViewController, UITableViewDelegate, UITableViewDa
         setHeader()
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+    }
+    
     func setHeader(){
         var header = UIView(frame:CGRect(x:0,y:0,width:self.view.frame.size.width,height:100))
         header.backgroundColor = UIColor.blue
@@ -74,8 +79,8 @@ class PublicInfoController: UIViewController, UITableViewDelegate, UITableViewDa
                     ind = ind + 1
                 }
                 
-                DispatchQueue.main.async { [unowned self] in
-                    self.infoTableView.reloadData()
+                DispatchQueue.main.async { [weak self] in
+                    self?.infoTableView.reloadData()
                 }
                 
                 case .failure(let error): print(error)

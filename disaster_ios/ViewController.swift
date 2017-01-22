@@ -29,13 +29,14 @@ class ViewController: UIViewController {
     }
 }
 
+
 extension ViewController: MeshEngineDelegate {
     
     func didReceived(syncable: Syncable) {
         switch SyncType.init(syncable: syncable) {
         case .news(let news):   print(news.text)
         case .needs(let needs): print(needs.text)
-        case .user(let user):   print(user.text)
+        case .user(let user):   print(user.name)
         case .none(): break
         }
     }

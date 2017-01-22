@@ -134,6 +134,14 @@ class MyInfoViewController: UIViewController {
         
     }
     
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        print(SyncEngine.shared.userAll())
+
+    }
+
+
     func changeView(){
         var hinan = hinanSiteiController()
         self.present(hinan, animated: true, completion: nil)

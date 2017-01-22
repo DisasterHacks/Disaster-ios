@@ -11,14 +11,16 @@ import Foundation
 import UIKit
 
 
-class hinanSiteiController: UIViewController, UISearchBarDelegate  {
+class hinanSiteiController: UIViewController, UISearchBarDelegate,UITextFieldDelegate  {
     
     
     var tmpText:String = ""
     var mySearchBar:UISearchBar! = nil
     var explainText:UITextView!
-    var sisetuName : UILabel!
-    var adName:UILabel!
+    var sisetuName : UITextField!
+    var adName:UITextField!
+    
+    var userDB = UserRealmModel()
     
     var registerButton:UIButton!
     
@@ -60,7 +62,7 @@ class hinanSiteiController: UIViewController, UISearchBarDelegate  {
             var nameLabel = UILabel(frame:CGRect(x:20,y:150,width:self.view.frame.size.width,height:50))
             nameLabel.text = "施設名"
             nameLabel.textColor = UIColorFromRGB(0xAAAAAA)
-            sisetuName = UILabel(frame:CGRect(x:80,y:150,width:self.view.frame.size.width,height:50))
+            sisetuName = UITextField(frame:CGRect(x:80,y:150,width:self.view.frame.size.width,height:50))
             sisetuName.textColor = UIColorFromRGB(0x14F3FF)
             self.view.addSubview(sisetuView)
             self.view.addSubview(nameLabel)
@@ -70,19 +72,23 @@ class hinanSiteiController: UIViewController, UISearchBarDelegate  {
         var adView = UIView(frame:CGRect(x:00,y:200,width:self.view.frame.size.width,height:50))
         adView.layer.borderWidth = 0.5
         adView.layer.borderColor = UIColorFromRGB(0xe3e3e3).cgColor
-        var adLabel = UILabel(frame:CGRect(x:20,y:200,width:self.view.frame.size.width,height:50))
+        var adLabel = UITextField(frame:CGRect(x:20,y:200,width:self.view.frame.size.width,height:50))
         adLabel.text = "住所"
+        adLabel.delegate = self
         adLabel.textColor = UIColorFromRGB(0xAAAAAA)
-        adName = UILabel(frame:CGRect(x:80,y:200,width:self.view.frame.size.width,height:50))
+        adName = UITextField(frame:CGRect(x:80,y:200,width:self.view.frame.size.width,height:50))
         adName.textColor = UIColorFromRGB(0x14F3FF)
+        adName.delegate = self
         self.view.addSubview(adView)
         self.view.addSubview(adLabel)
         self.view.addSubview(adName)
         
         //登録ボタン
-        registerButton = UIButton(frame:CGRect(x:self.view.frame.size.width/2-30,y:270,width:60,height:20))
+        registerButton = UIButton(frame:CGRect(x:self.view.frame.size.width/2-30,y:400,width:60,height:20))
+        registerButton.setTitle("登録", for: .normal)
         //registerButton.setImage(UIImage(named:"top.png"), for: .touchUpInside)
         registerButton.addTarget(self, action: "register", for: .touchUpInside)
+        registerButton.backgroundColor = UIColorFromRGB(0x000000)
         self.view.addSubview(registerButton)
         
         
@@ -91,9 +97,13 @@ class hinanSiteiController: UIViewController, UISearchBarDelegate  {
     
     func register(){
         //realmで自分の避難場所を登録する
-        
-        
-            
+        let user = UserRealmModel()
+        user.name = sisetuName.text!
+        user.shelterId = "111"
+        SyncEngine.shared.add(user) {
+        }
+        //print(SyncEngine.shared.userAll())
+        self.dismiss(animated: true, completion: nil)
     }
 
     
@@ -138,5 +148,31 @@ extension hinanSiteiController{
     }
     
 
+}
+
+
+extension hinanSiteiController{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // キーボードを隠す
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    // クリアボタンが押された時の処理
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
+    // テキストフィールドがフォーカスされた時の処理
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
+    // テキストフィールドでの編集が終わろうとするときの処理
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
+    }
 }
 

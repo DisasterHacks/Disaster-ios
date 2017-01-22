@@ -11,10 +11,12 @@ import RealmSwift
 import Realm
 
 class NeedsRealmModel: RealmModel {
-    dynamic var text = ""
+    dynamic var text   = ""
+    dynamic var userId = ""
     
     init(needs: Needs) {
-        self.text = needs.text
+        self.text   = needs.text
+        self.userId = needs.userId
         super.init(id: needs.id)
     }
     

@@ -13,7 +13,6 @@ import UIKit
 
 class hinanSiteiController: UIViewController, UISearchBarDelegate,UITextFieldDelegate  {
     
-    
     var tmpText:String = ""
     var mySearchBar:UISearchBar! = nil
     var explainText:UITextView!
@@ -99,7 +98,7 @@ class hinanSiteiController: UIViewController, UISearchBarDelegate,UITextFieldDel
         //realmで自分の避難場所を登録する
         let user = UserRealmModel()
         user.name = sisetuName.text!
-        user.shelterId = "111"
+        user.shelterId = ""
         SyncEngine.shared.add(user) {
         }
         //print(SyncEngine.shared.userAll())
@@ -145,6 +144,12 @@ extension hinanSiteiController{
         self.sisetuName.text = "ok"
         self.adName.text = tmpText
     
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        SyncEngine.shared.u
+
     }
     
 

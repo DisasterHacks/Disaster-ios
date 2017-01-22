@@ -23,8 +23,12 @@ class hinanSiteiController: UIViewController, UISearchBarDelegate,UITextFieldDel
     
     var registerButton:UIButton!
     
+    var shelterList = [String:String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setHinan()
+        
         self.view.backgroundColor = UIColor.white
         
         var topLabel = UILabel(frame:CGRect(x:0,y:0,width:self.view.frame.size.width,height:50))
@@ -47,7 +51,18 @@ class hinanSiteiController: UIViewController, UISearchBarDelegate,UITextFieldDel
         // Do any additional setup after loading the view, typically from a nib.
         
     }
+    
+    
+    func setHinan(){
+        var list = SyncEngine.shared.userAll()
         
+        for i in list{
+            shelterList[i.shelterId] = i.name
+            print("\(i.shelterId)=>\(i.name)")
+
+        }
+        
+    }
     func setUnderView(){
         //説明テキスト
         explainText = UITextView(frame:CGRect(x:0,y:100,width:self.view.frame.size.width,height:50))

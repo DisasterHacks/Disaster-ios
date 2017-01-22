@@ -45,28 +45,3 @@ extension ViewController: MeshEngineDelegate {
         // 繋がったら Realm からデータを全件取得して、データ別に全送信
     }
 }
-
-enum SyncType {
-    case news(News)
-    case needs(Needs)
-    case user(User)
-    case none()
-    init(syncable: Syncable) {
-        if syncable is News {
-            self = .news(syncable as! News)
-            return
-        }
-        
-        if syncable is Needs {
-            self = .needs(syncable as! Needs)
-            return
-        }
-        
-        if syncable is User {
-            self = .user(syncable as! User)
-            return
-        }
-        
-        self = .none()
-    }
-}

@@ -7,7 +7,26 @@
 //
 
 import Foundation
+import RealmSwift
+import Realm
 
 class NeedsRealmModel: RealmModel {
     dynamic var text = ""
+    
+    init(needs: Needs) {
+        self.text = needs.text
+        super.init(id: needs.id)
+    }
+    
+    required init(realm: RLMRealm, schema: RLMObjectSchema) {
+        super.init(realm: realm, schema: schema)
+    }
+    
+    required init(value: Any, schema: RLMSchema) {
+        super.init(value: value, schema: schema)
+    }
+    
+    required init() {
+        super.init()
+    }
 }

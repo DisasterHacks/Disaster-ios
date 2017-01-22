@@ -12,52 +12,36 @@ import Himotoki
 
 class ViewController: UIViewController {
     
+    let meshManager = MeshEngine.shared
     
-    //DB
-    let userdb = userDB()
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("きたー！")
-        himotoki()
-        realm()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.meshManager.delegate = self
+        self.meshManager.id = UUID.init().uuidString
+        self.meshManager.joinMeshNetwork()
     }
     
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func send(_ sender: Any) {
+        let news = News(id: UUID.init().uuidString, text: "hello world")
+        self.meshManager.send(syncable: news)
     }
-
-
 }
 
-extension ViewController{
-    func himotoki(){
-        /*
-        let json: [String: AnyObject] = [ "name": "taro" as AnyObject, "age": 22 as AnyObject ]
-        let person: Person? = try? Person.decodeValue(json)
-        if( person != nil){
-            print("name:\(person!.name) age:\(person!.age)")  //name:taro age:22
-        }else{
-            print("error")
-        }*/
-        let request = PersonAPI.PersonEnum.all()
-        Session.send(request) { result in
-            switch result {
-            case .success(let person): print(person)
-            case .failure(let error): print(error)
-            }
+
+extension ViewController: MeshEngineDelegate {
+    
+    func didReceived(syncable: Syncable) {
+        switch SyncType.init(syncable: syncable) {
+        case .news(let news):   print(news.text)
+        case .needs(let needs): print(needs.text)
+        case .user(let user):   print(user.name)
+        case .none(): break
         }
-        
     }
     
-    func realm(){
-        userdb.registerUserInfo(name: "kc", age: 200, gender: "boy")
-        for (key,val) in userdb.getAllUser(){
-            print("\(key)=>\(val)")
-        }
+    func didConnected(id: String) {
+        // 繋がったら Realm からデータを全件取得して、データ別に全送信
     }
-
 }

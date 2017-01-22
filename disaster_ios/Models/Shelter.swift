@@ -7,19 +7,29 @@
 //
 
 import Foundation
+import Himotoki
 
-class Shelter: NSCoding {
+final class Shelter: NSCoding, Decodable {
     
-    var id: String   = ""
-    var name: String = ""
+    dynamic var id: String   = ""
+    dynamic var name: String = ""
     
     internal func encode(with aCoder: NSCoder) {
         aCoder.encode(self.id,   forKey: "id")
         aCoder.encode(self.name, forKey: "name")
     }
     
+    init(id:String,name:String){
+        self.id = id
+        self.name = name
+    }
+    
     public required init(coder aDecoder: NSCoder) {
         self.id   = aDecoder.decodeObject(forKey: "id")   as? String ?? ""
         self.name = aDecoder.decodeObject(forKey: "name") as? String ?? ""
+    }
+    
+    static func decode(_ e: Extractor) throws -> Shelter {
+        return try Shelter(id: e <| "id",name: e <| "name")
     }
 }

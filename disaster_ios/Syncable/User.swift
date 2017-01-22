@@ -10,36 +10,25 @@ import Foundation
 import RealmSwift
 import Realm
 
-class User: Object, Syncable {
+class User: NSObject, Syncable {
     
     var id: String   = ""
-    var text: String = ""
+    var name: String = ""
     
-    init(text: String) {
-        self.text = text
+    init(id: String, name: String) {
+        self.id   = id
+        self.name = name
         super.init()
     }
     
     internal func encode(with aCoder: NSCoder) {
         aCoder.encode(self.id,   forKey: "id")
-        aCoder.encode(self.text, forKey: "text")
+        aCoder.encode(self.name, forKey: "text")
     }
     
     public required init(coder aDecoder: NSCoder) {
         self.id   = aDecoder.decodeObject(forKey: "id")   as? String ?? ""
-        self.text = aDecoder.decodeObject(forKey: "text") as? String ?? ""
+        self.name = aDecoder.decodeObject(forKey: "text") as? String ?? ""
         super.init()
-    }
-    
-    required init() {
-        super.init()
-    }
-    
-    required init(value: Any, schema: RLMSchema) {
-        super.init(value: value, schema: schema)
-    }
-    
-    required init(realm: RLMRealm, schema: RLMObjectSchema) {
-        super.init(realm: realm, schema: schema)
     }
 }

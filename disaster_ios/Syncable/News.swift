@@ -10,12 +10,13 @@ import Foundation
 import RealmSwift
 import Realm
 
-class News: Object, Syncable {
+class News: NSObject, Syncable {
     
     var id: String   = ""
     var text: String = ""
     
-    init(text: String) {
+    init(id: String, text: String) {
+        self.id   = id
         self.text = text
         super.init()
     }
@@ -29,17 +30,5 @@ class News: Object, Syncable {
         self.id   = aDecoder.decodeObject(forKey: "id")   as? String ?? ""
         self.text = aDecoder.decodeObject(forKey: "text") as? String ?? ""
         super.init()
-    }
-    
-    required init() {
-        super.init()
-    }
-    
-    required init(value: Any, schema: RLMSchema) {
-        super.init(value: value, schema: schema)
-    }
-    
-    required init(realm: RLMRealm, schema: RLMObjectSchema) {
-        super.init(realm: realm, schema: schema)
     }
 }

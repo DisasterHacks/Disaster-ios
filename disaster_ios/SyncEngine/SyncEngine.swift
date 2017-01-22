@@ -107,11 +107,19 @@ class SyncEngine {
         return Realm.objects(ShelterRealmModel.self)
     }
     
-    func user(id: String) -> Results<UserRealmModel> {
+    func user(by id: String) -> Results<UserRealmModel> {
         return Realm.objects(UserRealmModel.self).filter("id=%@", id)
+    }
+    
+    func userByName(name: String) -> Results<UserRealmModel> {
+        return Realm.objects(UserRealmModel.self).filter("name=%@", name)
     }
     
     func shelter(id: String) -> Results<ShelterRealmModel> {
         return Realm.objects(ShelterRealmModel.self).filter("id=%@", id)
+    }
+    
+    func shelterByName(name: String) -> Results<ShelterRealmModel> {
+        return Realm.objects(ShelterRealmModel.self).filter("name=%@", name)
     }
 }
